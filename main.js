@@ -28,21 +28,31 @@ function createCard(date, day, games) {
           `
 }
 
-document.querySelector("#cards").innerHTML = createCard(
-  "24/11",
-  "quinta",
-  createGame("switzerland", "07:00", "cameroon", "g") +
-  createGame("uruguay", "10:00", "south-korea", "h") +
-  createGame("ghana", "13:00", "portugal", "h") +
-  createGame("brazil", "16:00", "serbia", "g")
-)+
-createCard(
-  "28/11",
-  "segunda",
-  createGame("brazil", "13:00", "switzerland", "g") +
-  createGame("portugal", "16:00", "uruguay", "h")
-) + 
-createCard("02/12", "sexta", createGame("brazil", "16:00", "cameroon", "g"))
+document.querySelector("#cards").innerHTML =
+  createCard(
+    "24/11",
+    "quinta",
+    createGame("switzerland", "07:00", "cameroon", "g") +
+      createGame("uruguay", "10:00", "south-korea", "h") +
+      createGame("ghana", "13:00", "portugal", "h") +
+      createGame("brazil", "16:00", "serbia", "g")
+  ) +
+  createCard(
+    "28/11",
+    "segunda",
+    createGame("cameroon", "07:00", "serbia", "g") +
+      createGame("south-korea", "10:00", "ghana", "h") +
+      createGame("brazil", "13:00", "switzerland", "g") +
+      createGame("portugal", "16:00", "uruguay", "h")
+  ) +
+  createCard(
+    "02/12",
+    "sexta",
+    createGame("south-korea", "12:00", "portugal", "h") +
+      createGame("ghana", "12:00", "uruguay", "h") +
+      createGame("serbia", "13:00", "switzerland", "g") +
+      createGame("cameroon", "16:00", "brazil", "g")
+  )
 
 //events
 const flag_country = document.getElementsByClassName("country");
