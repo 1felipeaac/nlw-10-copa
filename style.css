@@ -82,6 +82,11 @@ header {
   width: 270px;
 }
 
+/* .card ul li span{
+  text-transform: uppercase;
+  color: #e1e1e6;
+} */
+
 .card ul li {
   display: flex;
   justify-content: space-between;
@@ -94,11 +99,22 @@ header {
   border-top: 1px solid #323238;
 }
 
+.card ul li #details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card ul li strong {
   font-weight: 900;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 125%;
   color: #e1e1e6;
+  text-transform: uppercase;
+}
+
+.card ul li strong:first-child{
+  border-bottom:1px solid var(--card-title-border-color);
 }
 
 .card h2:hover,
