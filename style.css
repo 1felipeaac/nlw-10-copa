@@ -107,7 +107,7 @@ header {
 
 .card ul li strong {
   font-weight: 900;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 125%;
   color: #e1e1e6;
   text-transform: uppercase;
@@ -148,6 +148,29 @@ header {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.country{
+  height: 50px;
+  width: 50px;
+}
+
+.info-country{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  gap: 0.5rem;
+}
+
+.name-country{
+  display: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--card-title-border-color);
+  font-size: 10px;
 }
 
 @media (min-width: 700px) {
