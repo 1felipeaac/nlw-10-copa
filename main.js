@@ -1,8 +1,7 @@
 // const arrayGame = []
 function createGame(player1, hour, player2, group) {
   // arrayGame.push([player1, hour, player2, group])
-  return (
-    `
+  return `
   <li>
       <div class="info-country">
         <img class="country" src="./assets/icon-${player1}.svg" alt=""><span class="name-country">${player1}</span>
@@ -16,7 +15,6 @@ function createGame(player1, hour, player2, group) {
       </div>
   </li>
   `
-  )
 }
 
 let delay = -0.4
@@ -34,19 +32,18 @@ function createCard(date, games) {
   ]
   delay = delay + 0.4
   // arrayDate.push([game_day.getDate() + "/" + (game_day.getMonth() + 1)])
-  return (
-    `
+  return `
   <div class="card" style="animation-delay: ${delay}s">
       <h2>${game_day.getDate() + "/" + (game_day.getMonth() + 1)} <span>${
-      week[game_day.getDay()]
-    }</span></h2>
+    week[game_day.getDay()]
+  }</span></h2>
       <ul>
         ${games}
       </ul>
   </div>
   `
-  )
 }
+
 
 document.querySelector("#cards").innerHTML =
   createCard("11/20/2022", createGame("qatar", "13", "ecuador", "a")) +
@@ -132,7 +129,10 @@ document.querySelector("#cards").innerHTML =
       createGame("ghana", "12", "uruguay", "h") +
       createGame("serbia", "13", "switzerland", "g") +
       createGame("cameroon", "16", "brazil", "g")
-  )
+  );
+
+
+// document.querySelector("#groups").innerHTML = "Aqui será criada uma tabela";
 
 // const arrayCards = []
 

@@ -30,18 +30,34 @@ body {
   background-image: var(--bg-img);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 body * {
   font-family: "Roboto", sans-serif;
 }
 
-#app {
+#app,
+#appGroup {
   width: fit-content;
   margin: auto;
   padding-top: 52px;
   /* border: 1px solid red; */
+}
+
+table {
+  width: 315px;
+  text-align: center;
+}
+
+th {
+  padding: 8px 16px;
+  border: 1px solid var(--card-title-border-color);
+  border-radius: 6px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 53px;
+  color: #f7dd43;
 }
 
 header {
@@ -49,7 +65,8 @@ header {
   text-align: center;
 }
 
-.card {
+.card,
+table {
   padding: 32px 23px;
   text-align: center;
   background: #1d1c19;
@@ -70,7 +87,8 @@ header {
   color: #f7dd43;
 }
 
-.card h2 span {
+.card h2 span,
+table {
   color: #e1e1e6;
   text-transform: uppercase;
 }
@@ -89,7 +107,8 @@ header {
   align-items: center;
 }
 
-.card ul li + li {
+.card ul li + li,
+tr + tr {
   /*se aplica ao <li> antreior a algum <li> existente*/
   padding-top: 24px;
   border-top: 1px solid #323238;
@@ -140,7 +159,8 @@ header {
   }
 }
 
-#cards {
+#cards,
+#groups {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -170,7 +190,8 @@ header {
 }
 
 @media (min-width: 700px) {
-  #cards {
+  #cards,
+  #groups {
     max-width: 1010px;
     flex-direction: row;
     flex-wrap: wrap;
