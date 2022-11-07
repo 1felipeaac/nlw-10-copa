@@ -49,6 +49,27 @@ function createCard(date, games) {
 }
 
 document.querySelector("#cards").innerHTML =
+  createCard("11/20/2022", createGame("qatar", "13", "ecuador", "a")) +
+  createCard(
+    "11/21/2022",
+    createGame("england", "10", "iran", "b") +
+      createGame("senegal", "13", "netherlands", "a") +
+      createGame("united-states", "16", "wales", "b")
+  ) +
+  createCard(
+    "11/22/2022",
+    createGame("argentina", "07", "saudi-arabia", "c") +
+      createGame("denmark", "10", "tunisia", "d") +
+      createGame("mexico", "13", "poland", "c") +
+      createGame("france", "16", "australia", "d")
+  ) +
+  createCard(
+    "11/23/2022",
+    createGame("morocco", "07", "croatia", "f") +
+      createGame("germany", "10", "japan", "e") +
+      createGame("spain", "13", "costa-rica", "e") +
+      createGame("belgium", "16", "canada", "f")
+  ) +
   createCard(
     "11/24/2022",
     createGame("switzerland", "07", "cameroon", "g") +
@@ -57,11 +78,53 @@ document.querySelector("#cards").innerHTML =
       createGame("brazil", "16", "serbia", "g")
   ) +
   createCard(
+    "11/25/2022",
+    createGame("wales", "07", "iran", "b") +
+      createGame("qatar", "10", "senegal", "a") +
+      createGame("netherlands", "13", "ecuador", "a") +
+      createGame("england", "16", "united-states", "b")
+  ) +
+  createCard(
+    "11/26/2022",
+    createGame("tunisia", "07", "australia", "d") +
+      createGame("poland", "10", "saudi-arabia", "c") +
+      createGame("france", "13", "denmark", "d") +
+      createGame("argentina", "16", "mexico", "c")
+  ) +
+  createCard(
+    "11/27/2022",
+    createGame("japan", "07", "costa-rica", "e") +
+      createGame("belgium", "10", "morocco", "f") +
+      createGame("croatia", "13", "canada", "f") +
+      createGame("spain", "16", "germany", "e")
+  ) +
+  createCard(
     "11/28/2022",
     createGame("cameroon", "07", "serbia", "g") +
       createGame("south-korea", "10", "ghana", "h") +
       createGame("brazil", "13", "switzerland", "g") +
       createGame("portugal", "16", "uruguay", "h")
+  ) +
+  createCard(
+    "11/29/2022",
+    createGame("ecuador", "12", "senegal", "a") +
+      createGame("netherlands", "12", "qatar", "a") +
+      createGame("iran", "16", "united-states", "b") +
+      createGame("wales", "16", "england", "b")
+  ) +
+  createCard(
+    "11/30/2022",
+    createGame("tunisia", "12", "france", "d") +
+      createGame("australia", "12", "denmark", "d") +
+      createGame("poland", "16", "argentina", "c") +
+      createGame("saudi-arabia", "16", "mexico", "c")
+  ) +
+  createCard(
+    "12/01/2022",
+    createGame("croatia", "12", "belgium", "f") +
+      createGame("canada", "12", "morocco", "f") +
+      createGame("japan", "16", "spain", "e") +
+      createGame("costa-rica", "16", "germany", "e")
   ) +
   createCard(
     "12/02/2022",
