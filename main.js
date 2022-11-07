@@ -56,17 +56,24 @@ document.querySelector("#cards").innerHTML =
 
 //events
 const flag_country = document.getElementsByClassName("country");
-const name_country = document.getElementsByClassName("name-country");
+const name_country = document.getElementsByClassName("name-country"); 
 
 for (let index = 0; index < flag_country.length; index++) {
   const this_flag = flag_country[index];
   const this_country = name_country[index];
 
-  this_flag.addEventListener("mouseover", function () {
-    this_country.style.display = "block";
-  })
+  this_flag.addEventListener("mouseover", event_mouseouver)
 
-  this_flag.addEventListener("mouseout", function(){
-     this_country.style.display = "none";
-  })
+  this_flag.addEventListener("mouseout", event_mouseout)
+
+  function event_mouseouver(){
+    this_country.style.display = "block"
+    this_flag.style.transform = "scale(0.7)"
+  }
+
+  function event_mouseout() {
+    this_country.style.display = "none"
+    this_flag.style.transform = "scale(1)"
+  }
+
 }
