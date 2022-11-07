@@ -141,8 +141,14 @@ document.querySelector("#cards").innerHTML =
 // console.log(arrayCards)
 
 //events
-const flag_country = document.getElementsByClassName("country")
-const name_country = document.getElementsByClassName("name-country")
+const flag_country = document.getElementsByClassName("country");
+const name_country = document.getElementsByClassName("name-country");
+
+// const button_table = document.querySelector("button");
+
+// button_table.addEventListener("click", function(){
+  
+// })
 
 for (let index = 0; index < flag_country.length; index++) {
   const this_flag = flag_country[index]
