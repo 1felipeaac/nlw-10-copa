@@ -1,0 +1,24 @@
+{
+  "name": "nlw_copa",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> NLW #10 Copa </h1>",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1felipeaac/nlw-10-copa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1felipeaac/nlw-10-copa/issues"
+  },
+  "homepage": "https://github.com/1felipeaac/nlw-10-copa#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
