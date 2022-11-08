@@ -7,9 +7,11 @@ function createLine(country) {
   `
 }
 
+let delay = -0.4;
 function createTable(group, line) {
+  delay = delay + 0.4
   return `
-  <table  cellspacing="15">
+  <table cellspacing="0" style="animation-delay: ${delay}s">
     <thead>
         <tr>
           <th colspan="2" scope="colgroup">Grupo ${group}</th>

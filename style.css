@@ -50,6 +50,11 @@ table {
   text-align: center;
 }
 
+td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 th {
   padding: 8px 16px;
   border: 1px solid var(--card-title-border-color);
@@ -57,7 +62,7 @@ th {
   width: fit-content;
   margin-inline: auto;
   margin-bottom: 53px;
-  color: #f7dd43;
+  color: #e1e1e6;
 }
 
 header {
@@ -74,7 +79,7 @@ table {
   border-radius: 6px;
 }
 
-.card h2 {
+.card h2{
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -83,8 +88,15 @@ table {
   border-radius: 6px;
   width: fit-content;
   margin-inline: auto;
-  margin-bottom: 53px;
+  margin-bottom: 13px;
   color: #f7dd43;
+}
+
+table tbody td + td,
+td:first-child {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #323238;
 }
 
 .card h2 span,
@@ -107,8 +119,7 @@ table {
   align-items: center;
 }
 
-.card ul li + li,
-tr + tr {
+.card ul li + li {
   /*se aplica ao <li> antreior a algum <li> existente*/
   padding-top: 24px;
   border-top: 1px solid #323238;
@@ -144,7 +155,8 @@ tr + tr {
   transition: transform 0.3s;
 }
 
-.card {
+.card,
+table {
   animation: appear 0.2s;
 }
 
@@ -196,4 +208,16 @@ tr + tr {
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+
+button{
+  border: none;
+  border-bottom: 2px solid var(--card-color-primary);
+  text-align: center;
+  background: #746615;
+  border-radius: 6px;
+  color: #e1e1e6;
+  text-transform: uppercase;
+  width: 150px;
+  cursor: pointer;
 }
