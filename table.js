@@ -8,8 +8,10 @@ function createLine(country) {
 }
 
 let delay = -0.4;
+const arrayTable = [];
 function createTable(group, line) {
   delay = delay + 0.4
+  arrayTable.push([group, line]);
   return `
   <table cellspacing="0" style="animation-delay: ${delay}s">
     <thead>
@@ -82,3 +84,4 @@ document.getElementById("groups").innerHTML =
       createLine("uruguay") +
       createLine("south-korea")
   )
+  // console.log(table);

@@ -15,8 +15,8 @@ function createGame(player1, hour, player2, group) {
   `
 }
 
-let delay = -0.4;
-// const arrayDate = [];
+let delay = -0.4
+const arrayCards = []
 function createCard(date, games) {
   game_day = new Date(date)
   var week = [
@@ -29,6 +29,7 @@ function createCard(date, games) {
     "Sábado",
   ]
   delay = delay + 0.4
+  arrayCards.push([date, games])
   return `
   <div class="card" style="animation-delay: ${delay}s">
       <h2>${game_day.getDate() + "/" + (game_day.getMonth() + 1)} <span>${
@@ -40,7 +41,6 @@ function createCard(date, games) {
   </div>
   `
 }
-
 
 document.querySelector("#cards").innerHTML =
   createCard("11/20/2022", createGame("qatar", "13", "ecuador", "a")) +
@@ -126,13 +126,14 @@ document.querySelector("#cards").innerHTML =
       createGame("ghana", "12", "uruguay", "h") +
       createGame("serbia", "13", "switzerland", "g") +
       createGame("cameroon", "16", "brazil", "g")
-  );
+  )
 
+console.log(arrayCards)
+// import { arrayTable, createLine, createTable } from "./table";
 
 //events
-const flag_country = document.getElementsByClassName("country");
-const name_country = document.getElementsByClassName("name-country");
-
+const flag_country = document.getElementsByClassName("country")
+const name_country = document.getElementsByClassName("name-country")
 
 for (let index = 0; index < flag_country.length; index++) {
   const this_flag = flag_country[index]

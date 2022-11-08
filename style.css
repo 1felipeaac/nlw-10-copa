@@ -65,6 +65,10 @@ th {
   color: #e1e1e6;
 }
 
+thead{
+  line-height: 2rem;
+}
+
 header {
   margin-bottom: 63px;
   text-align: center;
