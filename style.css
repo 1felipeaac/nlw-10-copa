@@ -45,7 +45,7 @@ body * {
   /* border: 1px solid red; */
 }
 
-table {
+table{
   width: 315px;
   text-align: center;
 }
@@ -160,7 +160,7 @@ table {
 }
 
 .card,
-table {
+.tableGroup, .tableScout {
   animation: appear 0.2s;
 }
 
@@ -186,6 +186,30 @@ table {
   height: 50px;
   width: 50px;
 }
+
+.scoutCountry{
+  height: 40px;
+  width: 40px;
+}
+
+.tableScout{
+  display: none;
+}
+
+.headScout > tr > th{
+  padding: 6px;
+  border: none;
+}
+
+.bodyScout  > tr > th{
+  padding: 0;
+  border: none;
+}
+
+.headTable{
+cursor: pointer;
+}
+
 
 .info-country {
   /* border: 1px solid red; */
