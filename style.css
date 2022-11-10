@@ -260,12 +260,12 @@ button{
   border-radius: 6px;
   color: #e1e1e6;
   text-transform: uppercase;
-  width: 50px;
+  width: 120px;
   cursor: pointer;
 }
 
 .buttonScout{
-  width: 260px;
+  width: 50px;
   height: 50px;
   background: none;
 }
