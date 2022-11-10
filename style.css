@@ -197,8 +197,15 @@ table {
 }
 
 .headScout > tr > th{
-  padding: 6px;
+  padding: 0px;
   border: none;
+  height: 30px;
+  width: 30px;
+}
+
+.headScout:nth-child(1){
+  flex-basis:100% ;
+  border: 1px solid red;
 }
 
 .bodyScout  > tr > th{
