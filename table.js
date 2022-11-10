@@ -1,3 +1,4 @@
+
 //Array Groups
 var arrayWorldCup = [
   {
@@ -62,8 +63,8 @@ var arrayWorldCup = [
 function createLine(country) {
   return `
   <tr>
-        <td scope="col"><img class="country" src="./assets/icon-${country}.svg" alt=""></th>
-        <td scope="col">${country}</th>
+        <td class="td-tbody-Group" scope="col"><img class="country" src="./assets/icon-${country}.svg" alt=""></th>
+        <td class="td-tbody-Group" scope="col">${country}</th>
   </tr>
   `
 }
@@ -74,12 +75,12 @@ function createTable(group, line, lineScout) {
   return (
     `
   <table class="tableGroup" cellspacing="0" style="animation-delay: ${delay}s">
-    <thead class="headTable">
+    <thead class="theadGroup">
         <tr>
-          <th colspan="2" scope="colgroup">Grupo ${group}</th>
+          <th class="th-thead-group" colspan="2" scope="colgroup">Grupo ${group}</th>
         </tr>
     </thead>
-    <tbody class="bodyGroup">
+    <tbody class="tbodyGroup">
         ${line}
     </tbody>
   </table>
@@ -88,7 +89,7 @@ function createTable(group, line, lineScout) {
 }
 
 function createLineScout(country) {
-  return `<tr>
+  return `<tr class="tr-tbody-scout">
     <th><img class="scoutCountry" src="./assets/icon-${country}.svg" alt=""></th>
     <td>0</td>
     <td>0</td>
@@ -103,23 +104,24 @@ function createLineScout(country) {
 
 function createTableScout(lineScout) {
   return `<table class="tableScout">
-	<thead class="headScout">
+	<thead class="theadScout">
+   
     <tr>
-      <th colspan="9" scope="colgroup"><button class="backGroup" type="submit">voltar</button></th>
+      <th colspan="9" scope="colgroup"><button class="buttonScout" type="submit"><img class="icon-button" src="./assets/icon-button.svg" alt=""></button></th>
     </tr>
 		<tr>
-			<th></th>
-      <th>P</th>
-			<th>J</th>
-			<th>V</th>
-      <th>E</th>
-			<th>D</th>
-			<th>GP</th>
-			<th>GC</th>
-			<th>SG</th>	
+			<td class="td-thead-scout"></td>
+      <td class="td-thead-scout">P</td>
+			<td class="td-thead-scout">J</td>
+			<td class="td-thead-scout">V</td>
+      <td class="td-thead-scout">E</td>
+			<td class="td-thead-scout">D</td>
+			<td class="td-thead-scout">GP</td>
+			<td class="td-thead-scout">GC</td>
+			<td class="td-thead-scout">SG</td>	
 		</tr>
 	</thead>
-	<tbody class="bodyScout">
+	<tbody class="tbodyScout">
 		${lineScout}
 	</tbody>`
 }
@@ -140,27 +142,34 @@ function createTableGroup(i) {
   }
 }
 
+//Creating Groups
+const GroupA = createTableGroup(0);
+const GroupB = createTableGroup(1);
+const GroupC = createTableGroup(2);
+const GroupD = createTableGroup(3);
+const GroupE = createTableGroup(4);
+const GroupF = createTableGroup(5);
+const GroupG = createTableGroup(6);
+const GroupH = createTableGroup(7);
 
 //Build Page
 document.getElementById("groups").innerHTML =
-  createTableGroup(0) +
-  createTableGroup(1) +
-  createTableGroup(2) +
-  createTableGroup(3) +
-  createTableGroup(4) +
-  createTableGroup(5) +
-  createTableGroup(6) +
-  createTableGroup(7)
+  GroupA +
+  GroupB +
+  GroupC +
+  GroupD +
+  GroupE +
+  GroupF +
+  GroupG +
+  GroupH
 
 
 // Events  
-const headTableGroup = document.querySelectorAll("thead.headTable")
+const headTableGroup = document.querySelectorAll("thead.theadGroup")
 // const headTableScout = document.querySelectorAll("thead.headScout");
 const tableScout = document.querySelectorAll("table.tableScout")
 const tableGroup = document.querySelectorAll("table.tableGroup")
-const buttonGroup = document.querySelectorAll("button.backGroup")
-
-// console.log(tableGroup);
+const buttonGroup = document.querySelectorAll("button.buttonScout")
 
 for (let index = 0; index < headTableGroup.length; index++) {
   const elementGroup = headTableGroup[index]

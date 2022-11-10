@@ -1,3 +1,4 @@
+/*Shared Settings*/
 * {
   margin: 0;
   padding: 0;
@@ -45,36 +46,7 @@ body * {
   /* border: 1px solid red; */
 }
 
-table{
-  width: 315px;
-  text-align: center;
-}
-
-td {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-th {
-  padding: 8px 16px;
-  border: 1px solid var(--card-title-border-color);
-  border-radius: 6px;
-  width: fit-content;
-  margin-inline: auto;
-  margin-bottom: 53px;
-  color: #e1e1e6;
-}
-
-thead{
-  line-height: 2rem;
-}
-
-header {
-  margin-bottom: 63px;
-  text-align: center;
-}
-
-.card,
+.card,.goups,
 table {
   padding: 32px 23px;
   text-align: center;
@@ -83,26 +55,112 @@ table {
   border-radius: 6px;
 }
 
-.card h2{
+.card h2,
+.card ul li strong,
+.card ul li img, .tableGroup, .tableScout {
+  transition: transform 0.3s;
+}
+
+.card,
+.tableGroup, .tableScout {
+  animation: appear 0.2s;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#cards,
+#groups {
   display: flex;
-  gap: 16px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/*...........................................Tables Page*......................................*/
+
+table{
+  width: 315px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 63px;
+  text-align: center;
+}
+
+td {
+  display: table-cell;
+  vertical-align: middle;
+}
+/*-----------------Group Table--------------*/
+.th-thead-group {
   padding: 8px 16px;
-  border: 1px solid var(--card-title-border-color);
+  border: 1px solid var(--card-color-primary);
+  background-color: var(--card-title-border-color);
   border-radius: 6px;
   width: fit-content;
   margin-inline: auto;
-  margin-bottom: 13px;
-  color: #f7dd43;
+  margin-bottom: 53px;
+  color: #e1e1e6;
+  line-height: 2rem;
 }
 
-table tbody td + td,
-td:first-child {
+.theadGroup{
+cursor: pointer;
+}
+
+.tableGroup .tbodyGroup .td-tbody-Group + .td-tbody-Group, 
+.td-tbody-Group:first-child{
   padding-top: 12px;
   padding-bottom: 12px;
   border-top: 1px solid #323238;
 }
+/*-----------------Scout Table--------------*/
+.td-thead-scout{
+ font-size: x-small;
+}
 
+.scoutCountry{
+  height: 40px;
+  width: 40px;
+}
+
+.tableScout{
+  display: none;
+  border-spacing: 0;
+}
+
+.theadScout > tr > th{
+  /* padding: 20px 30px 20px 30px; */
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
+.tableScout td{
+  height: 60px;
+  width: 30px;
+  font-size: small;
+}
+
+.tableScout .tr-tbody-scout td{
+ border-top: 1px solid #323238;
+}
+
+.tr-tbody-scout th{
+  padding: 5px;
+}
+
+
+/*.................................................Calendar Page..................................*/
 .card h2 span,
 table {
   color: #e1e1e6;
@@ -152,71 +210,18 @@ table {
 .card ul li img:hover {
   transform: scale(1.1);
 }
-
-.card h2,
-.card ul li strong,
-.card ul li img {
-  transition: transform 0.3s;
-}
-
-.card,
-.tableGroup, .tableScout {
-  animation: appear 0.2s;
-}
-
-@keyframes appear {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-#cards,
-#groups {
+.card h2{
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  gap: 16px;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 1px solid var(--card-title-border-color);
+  border-radius: 6px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 13px;
+  color: #f7dd43;
 }
-
-.country {
-  height: 50px;
-  width: 50px;
-}
-
-.scoutCountry{
-  height: 40px;
-  width: 40px;
-}
-
-.tableScout{
-  display: none;
-}
-
-.headScout > tr > th{
-  padding: 0px;
-  border: none;
-  height: 30px;
-  width: 30px;
-}
-
-.headScout:nth-child(1){
-  flex-basis:100% ;
-  border: 1px solid red;
-}
-
-.bodyScout  > tr > th{
-  padding: 0;
-  border: none;
-}
-
-.headTable{
-cursor: pointer;
-}
-
 
 .info-country {
   /* border: 1px solid red; */
@@ -236,6 +241,8 @@ cursor: pointer;
   font-size: 10px;
 }
 
+
+/*.......................................Responsiveness...................................*/
 @media (min-width: 700px) {
   #cards,
   #groups {
@@ -244,7 +251,7 @@ cursor: pointer;
     flex-wrap: wrap;
   }
 }
-
+/*...............................................Button......................................*/
 button{
   border: none;
   border-bottom: 2px solid var(--card-color-primary);
@@ -253,6 +260,17 @@ button{
   border-radius: 6px;
   color: #e1e1e6;
   text-transform: uppercase;
-  width: 150px;
+  width: 50px;
   cursor: pointer;
+}
+
+.buttonScout{
+  width: 260px;
+  height: 50px;
+  background: none;
+}
+
+.icon-button{
+  height: 40px;
+  width: 50px;
 }

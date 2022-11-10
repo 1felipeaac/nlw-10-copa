@@ -18,7 +18,7 @@ function createGame(player1, hour, player2, group) {
 let delay = -0.4
 const arrayCards = []
 function createCard(date, games) {
-  game_day = new Date(date)
+  const game_day = new Date(date)
   var week = [
     "Domingo",
     "Segunda",
@@ -35,6 +35,8 @@ function createCard(date, games) {
       <h2>${game_day.getDate() + "/" + (game_day.getMonth() + 1)} <span>${
     week[game_day.getDay()]
   }</span></h2>
+
+
       <ul>
         ${games}
       </ul>
