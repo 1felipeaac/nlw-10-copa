@@ -84,6 +84,11 @@ table {
   gap: 30px;
 }
 
+.icon{
+  height: 30px;
+  width: 30px;
+}
+
 /*...........................................Tables Page*......................................*/
 
 table{
@@ -104,7 +109,6 @@ td {
 .th-thead-group {
   padding: 8px 16px;
   border: 1px solid var(--card-color-primary);
-  background-color: var(--card-title-border-color);
   border-radius: 6px;
   width: fit-content;
   margin-inline: auto;
@@ -113,8 +117,11 @@ td {
   line-height: 2rem;
 }
 
-.theadGroup{
+.theadGroup, .buttonScout{
 cursor: pointer;
+background-image: url("./assets/icon-button.svg");
+background-repeat: no-repeat;
+background-position: right;
 }
 
 .tableGroup .tbodyGroup .td-tbody-Group + .td-tbody-Group, 
@@ -253,10 +260,9 @@ table {
 }
 /*...............................................Button......................................*/
 button{
-  border: none;
-  border-bottom: 2px solid var(--card-color-primary);
+  border: 1px outset var(--card-color-primary);
   text-align: center;
-  background: #746615;
+  background-color: var(--card-bg-color);
   border-radius: 6px;
   color: #e1e1e6;
   text-transform: uppercase;
@@ -265,12 +271,14 @@ button{
 }
 
 .buttonScout{
-  width: 50px;
+  width: 269px;
   height: 50px;
-  background: none;
 }
 
 .icon-button{
   height: 40px;
   width: 50px;
 }
+
+/*............................Toggle Switch.......................*/
+

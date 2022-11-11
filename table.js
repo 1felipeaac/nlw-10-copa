@@ -107,7 +107,11 @@ function createTableScout(lineScout) {
 	<thead class="theadScout">
    
     <tr>
-      <th colspan="9" scope="colgroup"><button class="buttonScout" type="submit"><img class="icon-button" src="./assets/icon-button.svg" alt=""></button></th>
+      <th colspan="9" scope="colgroup">
+        <button class="buttonScout" type="submit">
+          table & fixtures
+        </button>
+      </th>
     </tr>
 		<tr>
 			<td class="td-thead-scout"></td>
@@ -165,14 +169,16 @@ document.getElementById("groups").innerHTML =
 
 
 // Events  
-const headTableGroup = document.querySelectorAll("thead.theadGroup")
+const headTableGroup = document.querySelectorAll("thead.theadGroup");
 // const headTableScout = document.querySelectorAll("thead.headScout");
-const tableScout = document.querySelectorAll("table.tableScout")
-const tableGroup = document.querySelectorAll("table.tableGroup")
-const buttonGroup = document.querySelectorAll("button.buttonScout")
+const tableScout = document.querySelectorAll("table.tableScout");
+const tableGroup = document.querySelectorAll("table.tableGroup");
+const buttonGroup = document.querySelectorAll("button.buttonScout");
+const toggleGroup = document.getElementById("toggle");
 
 for (let index = 0; index < headTableGroup.length; index++) {
   const elementGroup = headTableGroup[index]
+  const elementToggleGroup = tableGroup[index]
   // const elementScout = headTableScout[index];
   const elementTableGroup = tableGroup[index]
   const elementTableScout = tableScout[index]
