@@ -106,7 +106,7 @@ td {
   vertical-align: middle;
 }
 /*-----------------Group Table--------------*/
-.th-thead-group {
+/* .th-thead-group {
   padding: 8px 16px;
   border: 1px solid var(--card-color-primary);
   border-radius: 6px;
@@ -115,9 +115,11 @@ td {
   margin-bottom: 53px;
   color: #e1e1e6;
   line-height: 2rem;
-}
+  border-bottom: 5px outset var(--card-color-primary);
+  border-left: 5px outset var(--card-color-primary);
+} */
 
-.theadGroup, .buttonScout{
+.theadGroup, .buttonScout, .buttonGroup{
 cursor: pointer;
 background-image: url("./assets/icon-button.svg");
 background-repeat: no-repeat;
@@ -228,6 +230,7 @@ table {
   margin-inline: auto;
   margin-bottom: 13px;
   color: #f7dd43;
+  
 }
 
 .info-country {
@@ -270,9 +273,11 @@ button{
   cursor: pointer;
 }
 
-.buttonScout{
+.buttonScout, .buttonGroup{
   width: 269px;
   height: 50px;
+  border-bottom: 5px outset var(--card-color-primary);
+  border-left: 5px outset var(--card-color-primary);
 }
 
 .icon-button{

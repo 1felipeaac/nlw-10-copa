@@ -1,3 +1,5 @@
+import { arrayGames } from "./data.js";
+
 function createGame(player1, hour, player2, group) {
   return `
   <li>
@@ -16,7 +18,6 @@ function createGame(player1, hour, player2, group) {
 }
 
 let delay = -0.4
-const arrayCards = []
 function createCard(date, games) {
   const game_day = new Date(date)
   var week = [
@@ -29,13 +30,11 @@ function createCard(date, games) {
     "Sábado",
   ]
   delay = delay + 0.4
-  arrayCards.push([date, games])
   return `
   <div class="card" style="animation-delay: ${delay}s">
       <h2>${game_day.getDate() + "/" + (game_day.getMonth() + 1)} <span>${
     week[game_day.getDay()]
   }</span></h2>
-
 
       <ul>
         ${games}
@@ -44,93 +43,100 @@ function createCard(date, games) {
   `
 }
 
-document.querySelector("#cards").innerHTML =
-  createCard("11/20/2022", createGame("qatar", "13", "ecuador", "a")) +
-  createCard(
-    "11/21/2022",
-    createGame("england", "10", "iran", "b") +
-      createGame("senegal", "13", "netherlands", "a") +
-      createGame("united-states", "16", "wales", "b")
-  ) +
-  createCard(
-    "11/22/2022",
-    createGame("argentina", "07", "saudi-arabia", "c") +
-      createGame("denmark", "10", "tunisia", "d") +
-      createGame("mexico", "13", "poland", "c") +
-      createGame("france", "16", "australia", "d")
-  ) +
-  createCard(
-    "11/23/2022",
-    createGame("morocco", "07", "croatia", "f") +
-      createGame("germany", "10", "japan", "e") +
-      createGame("spain", "13", "costa-rica", "e") +
-      createGame("belgium", "16", "canada", "f")
-  ) +
-  createCard(
-    "11/24/2022",
-    createGame("switzerland", "07", "cameroon", "g") +
-      createGame("uruguay", "10", "south-korea", "h") +
-      createGame("ghana", "13", "portugal", "h") +
-      createGame("brazil", "16", "serbia", "g")
-  ) +
-  createCard(
-    "11/25/2022",
-    createGame("wales", "07", "iran", "b") +
-      createGame("qatar", "10", "senegal", "a") +
-      createGame("netherlands", "13", "ecuador", "a") +
-      createGame("england", "16", "united-states", "b")
-  ) +
-  createCard(
-    "11/26/2022",
-    createGame("tunisia", "07", "australia", "d") +
-      createGame("poland", "10", "saudi-arabia", "c") +
-      createGame("france", "13", "denmark", "d") +
-      createGame("argentina", "16", "mexico", "c")
-  ) +
-  createCard(
-    "11/27/2022",
-    createGame("japan", "07", "costa-rica", "e") +
-      createGame("belgium", "10", "morocco", "f") +
-      createGame("croatia", "13", "canada", "f") +
-      createGame("spain", "16", "germany", "e")
-  ) +
-  createCard(
-    "11/28/2022",
-    createGame("cameroon", "07", "serbia", "g") +
-      createGame("south-korea", "10", "ghana", "h") +
-      createGame("brazil", "13", "switzerland", "g") +
-      createGame("portugal", "16", "uruguay", "h")
-  ) +
-  createCard(
-    "11/29/2022",
-    createGame("ecuador", "12", "senegal", "a") +
-      createGame("netherlands", "12", "qatar", "a") +
-      createGame("iran", "16", "united-states", "b") +
-      createGame("wales", "16", "england", "b")
-  ) +
-  createCard(
-    "11/30/2022",
-    createGame("tunisia", "12", "france", "d") +
-      createGame("australia", "12", "denmark", "d") +
-      createGame("poland", "16", "argentina", "c") +
-      createGame("saudi-arabia", "16", "mexico", "c")
-  ) +
-  createCard(
-    "12/01/2022",
-    createGame("croatia", "12", "belgium", "f") +
-      createGame("canada", "12", "morocco", "f") +
-      createGame("japan", "16", "spain", "e") +
-      createGame("costa-rica", "16", "germany", "e")
-  ) +
-  createCard(
-    "12/02/2022",
-    createGame("south-korea", "12", "portugal", "h") +
-      createGame("ghana", "12", "uruguay", "h") +
-      createGame("serbia", "13", "switzerland", "g") +
-      createGame("cameroon", "16", "brazil", "g")
-  )
+function createCardGames(i){
+    return createGame(
+      arrayGames[i].country1,
+      arrayGames[i].hour,
+      arrayGames[i].country2,
+      arrayGames[i].group,
+      arrayGames[i].date
+    )
+}
 
-console.log(arrayCards)
+document.querySelector("#cards").innerHTML =
+  createCard(arrayGames[0].date, createGame(arrayGames[0].country1, arrayGames[0].hour, arrayGames[0].country2, arrayGames[0].group)) +
+  createCard(
+    arrayGames[1].date,
+    createCardGames(1) + createCardGames(2) + createCardGames(3)
+  ) +
+  createCard(
+    arrayGames[4].date,
+    createCardGames(4) +
+      createCardGames(5) +
+      createCardGames(6) +
+      createCardGames(7)
+  ) +
+  createCard(
+    arrayGames[8].date,
+    createCardGames(8) +
+      createCardGames(9) +
+      createCardGames(10) +
+      createCardGames(11)
+  ) +
+  createCard(
+    arrayGames[12].date,
+    createCardGames(12) +
+      createCardGames(13) +
+      createCardGames(14) +
+      createCardGames(15)
+  ) +
+  createCard(
+    arrayGames[16].date,
+    createCardGames(16) +
+      createCardGames(17) +
+      createCardGames(18) +
+      createCardGames(19)
+  ) +
+  createCard(
+    arrayGames[20].date,
+    createCardGames(20) +
+      createCardGames(21) +
+      createCardGames(22) +
+      createCardGames(23)
+  ) +
+  createCard(
+    arrayGames[24].date,
+    createCardGames(24) +
+      createCardGames(25) +
+      createCardGames(26) +
+      createCardGames(27)
+  ) +
+  createCard(
+    arrayGames[28].date,
+    createCardGames(28) +
+      createCardGames(29) +
+      createCardGames(30) +
+      createCardGames(31)
+  ) +
+  createCard(
+    arrayGames[32].date,
+    createCardGames(32) +
+      createCardGames(33) +
+      createCardGames(34) +
+      createCardGames(35)
+  ) +
+  createCard(
+    arrayGames[36].date,
+    createCardGames(36) +
+      createCardGames(37) +
+      createCardGames(38) +
+      createCardGames(39)
+  ) +
+  createCard(
+    arrayGames[40].date,
+    createCardGames(40) +
+      createCardGames(41) +
+      createCardGames(42) +
+      createCardGames(43)
+  ) +
+  createCard(
+    arrayGames[44].date,
+    createCardGames(44) +
+      createCardGames(45) +
+      createCardGames(46) +
+      createCardGames(47)
+  )
+// console.log(arrayCards)
 // import { arrayTable, createLine, createTable } from "./table";
 
 //events
