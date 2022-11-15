@@ -38,15 +38,21 @@ body * {
   font-family: "Roboto", sans-serif;
 }
 
+#trophy {
+  height: 200px;
+  width: 200px;
+}
+
 #app,
 #appGroup {
   width: fit-content;
   margin: auto;
-  padding-top: 52px;
+  padding-top: 30px;
   /* border: 1px solid red; */
 }
 
-.card,.goups,
+.card,
+.goups,
 table {
   padding: 32px 23px;
   text-align: center;
@@ -57,12 +63,15 @@ table {
 
 .card h2,
 .card ul li strong,
-.card ul li img, .tableGroup, .tableScout {
+.card ul li img,
+.tableGroup,
+.tableScout {
   transition: transform 0.3s;
 }
 
 .card,
-.tableGroup, .tableScout {
+.tableGroup,
+.tableScout {
   animation: appear 0.2s;
 }
 
@@ -84,33 +93,31 @@ table {
   gap: 30px;
 }
 
-.icon{
+.icon {
   height: 30px;
   width: 30px;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 25px;
 }
 
-#timer{
+#timer {
   /* border: 1px groove var(--card_title_border_color); */
   padding: 10px;
   color: var(--card_color_primary);
-  font-size: xx-large;
+  font-size: large;
   box-shadow: -5px -10px 30px #e1e1e6, 6px 9px 15px var(--card_color_primary);
   width: fit-content;
   border-radius: 30px;
-
-
-
 }
 /*...........................................Tables Page*......................................*/
 
-table{
+table {
   width: 315px;
   text-align: center;
 }
@@ -126,55 +133,56 @@ td {
 }
 /*-----------------Group Table--------------*/
 
-.theadGroup, .buttonScout, .buttonGroup{
-cursor: pointer;
-background-image: url("./assets/icon-button.svg");
-background-repeat: no-repeat;
-background-position: right;
+.theadGroup,
+.buttonScout,
+.buttonGroup {
+  cursor: pointer;
+  background-image: url("./assets/icon-button.svg");
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
-.tableGroup .tbodyGroup .td-tbody-Group + .td-tbody-Group, 
-.td-tbody-Group:first-child{
+.tableGroup .tbodyGroup .td-tbody-Group + .td-tbody-Group,
+.td-tbody-Group:first-child {
   padding-top: 12px;
   padding-bottom: 12px;
   border-top: 1px solid #323238;
 }
 /*-----------------Scout Table--------------*/
-.td-thead-scout{
- font-size: x-small;
+.td-thead-scout {
+  font-size: x-small;
 }
 
-.scoutCountry{
+.scoutCountry {
   height: 40px;
   width: 40px;
 }
 
-.tableScout{
+.tableScout {
   display: none;
   border-spacing: 0;
 }
 
-.theadScout > tr > th{
+.theadScout > tr > th {
   /* padding: 20px 30px 20px 30px; */
   border: none;
   height: 30px;
   width: 30px;
 }
 
-.tableScout td{
+.tableScout td {
   height: 60px;
   width: 30px;
   font-size: small;
 }
 
-.tableScout .tr-tbody-scout td{
- border-top: 1px solid #323238;
+.tableScout .tr-tbody-scout td {
+  border-top: 1px solid #323238;
 }
 
-.tr-tbody-scout th{
+.tr-tbody-scout th {
   padding: 5px;
 }
-
 
 /*.................................................Calendar Page..................................*/
 .card h2 span,
@@ -226,7 +234,7 @@ table {
 .card ul li img:hover {
   transform: scale(1.1);
 }
-.card h2{
+.card h2 {
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -237,7 +245,6 @@ table {
   margin-inline: auto;
   margin-bottom: 13px;
   color: #f7dd43;
-  
 }
 
 .info-country {
@@ -258,18 +265,39 @@ table {
   font-size: 10px;
 }
 
-#get_theme{
+#get_theme {
+  display: none;
+  position: absolute;
+  min-width: fit-content;
+  padding: 5px 16px;
+  align-content: center;
+  z-index: 1;
+}
+
+#dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px outset var(--card_color_primary);
+  border-radius: 5px;
+  background-color: var(--card_bg_color);
+}
+
+#dropdown:hover #get_theme {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+}
+
+#drop-theme {
+  padding: 5px;
+  color: #e1e1e6;
+  text-transform: uppercase;
+  font-size: small;
 }
 
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 2.4rem;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -295,16 +323,16 @@ table {
   left: 0;
   height: 25px;
   width: 25px;
-  border-radius: 20px;  /* background-color: #eee; */
+  border-radius: 20px; /* background-color: #eee; */
 }
 
-#span_yellow{
+#span_yellow {
   background-color: #746615;
 }
-#span_blue{
-  background-color: #338af3 ;
+#span_blue {
+  background-color: #338af3;
 }
-#span_green{
+#span_green {
   background-color: #047c3f;
 }
 
@@ -315,7 +343,7 @@ table {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -343,7 +371,6 @@ table {
   transform: rotate(45deg);
 }
 
-
 /*.......................................Responsiveness...................................*/
 @media (min-width: 700px) {
   #cards,
@@ -354,7 +381,7 @@ table {
   }
 }
 /*...............................................Button......................................*/
-button{
+button {
   border: 1px outset var(--card_color_primary);
   text-align: center;
   background-color: var(--card_bg_color);
@@ -365,17 +392,17 @@ button{
   cursor: pointer;
 }
 
-.buttonScout, .buttonGroup{
+.buttonScout,
+.buttonGroup {
   width: 269px;
   height: 50px;
   border-bottom: 5px outset var(--card_color_primary);
   border-left: 5px outset var(--card_color_primary);
 }
 
-.icon-button{
+.icon-button {
   height: 40px;
   width: 50px;
 }
 
 /*............................Toggle Switch.......................*/
-

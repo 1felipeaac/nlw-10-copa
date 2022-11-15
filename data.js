@@ -438,26 +438,28 @@ export function crateHeader(local) {
   }
 
   return `
-    <img src="./assets/logo.svg" alt="Logo da NLW">
+    <img id="trophy" src="./assets/logo-world-cup.svg" alt="Taça da Copa do Mundo">
     <nav><a href="./${local}.html"><button type="submit">ir para ${page}</button></a><div id="timer"></div></nav>
-    
-    <div id="get_theme">
-      <label class="container" id="yellow">
-        <input type="radio" name="theme" id="yellow" value="yellow"/>
-        <span class="checkmark" id="span_yellow"></span>
-      </label>
-      <label class="container" id="blue">
-        <input type="radio" name="theme" id="blue" value="blue"/>
-        <span class="checkmark" id="span_blue"></span>
-      </label>
-      <label class="container" id="green">
-        <input type="radio" name="theme" id="green" value="green"/>
-        <span class="checkmark" id="span_green"></span>
-      </label> 
+    <div id="dropdown">
+      <strong id="drop-theme">Escolha seu tema</strong>
+      <div id="get_theme">
+        <label class="container" id="yellow">
+          <input type="radio" name="theme" id="yellow" value="yellow"/>
+          <span class="checkmark" id="span_yellow"></span>
+        </label>
+        <label class="container" id="blue">
+          <input type="radio" name="theme" id="blue" value="blue"/>
+          <span class="checkmark" id="span_blue"></span>
+        </label>
+        <label class="container" id="green">
+          <input type="radio" name="theme" id="green" value="green"/>
+          <span class="checkmark" id="span_green"></span>
+        </label> 
+      </div>
     </div>
   `
 }
-export function setTheme(){
+export function setTheme() {
   const color_theme = document.querySelectorAll("input")
   let body = document.querySelector("body")
 
@@ -465,17 +467,14 @@ export function setTheme(){
     // console.log(iterator.checked)
     iterator.addEventListener("click", function () {
       // console.log(iterator.value)
-      if (iterator.checked) body.className = iterator.value;
+      if (iterator.checked) body.className = iterator.value
     })
   }
   getTheme()
 }
 
-export function getTheme(){
+export function getTheme() {
   document.querySelector("body").addEventListener("change", function () {
-    
     localStorage.setItem("color", document.querySelector("body").className)
   })
 }
-
-
