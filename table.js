@@ -1,4 +1,4 @@
-import { arrayWorldCup, crateHeader } from "./data.js";
+import { arrayWorldCup, crateHeader, setTheme } from "./data.js";
 
 //Functions constructors
 function createLine(country) {
@@ -114,6 +114,8 @@ document.getElementById("groups").innerHTML =
 // Events  
 
 document.querySelector("header").innerHTML = crateHeader("index");
+document.querySelector("body").className = localStorage.getItem("color")
+
 
 const headTableGroup = document.querySelectorAll("thead.theadGroup");
 const tableScout = document.querySelectorAll("table.tableScout");
@@ -129,6 +131,7 @@ for (let index = 0; index < headTableGroup.length; index++) {
 
   document.querySelector("#timer").style.visibility = "hidden";
   document.querySelector("nav").style.gap = "0"
+  document.getElementById("get_theme").style.visibility = "hidden";
 
 
   elementButtonGroup.addEventListener("click", event_click_tableScout)

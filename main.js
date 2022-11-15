@@ -1,4 +1,4 @@
-import { arrayGames, crateHeader } from "./data.js"
+import { arrayGames, crateHeader, setTheme } from "./data.js"
 
 function createGame(player1, hour, player2, group) {
   return `
@@ -148,22 +148,25 @@ document.querySelector("#cards").innerHTML =
 document.querySelector("header").innerHTML = crateHeader("groups");
 
 
-const flag_country = document.getElementsByClassName("country");
-const name_country = document.getElementsByClassName("name-country");
+setTheme();
+//----------------------- SAVE CLASSNAME ----------------------
+var field = document.querySelector("body")
 
-//FUTURE IMPLEMENTATION
-// const color_theme = document.querySelectorAll("input")
-// let body = document.querySelector("body")
+// Se tivermos um valor salvo automaticamente
+// (isto só ocorrerá se a página for acidentalmente recarregada)
+if (sessionStorage.getItem("autosave")) {
+  // Restaura o conteúdo da caixa de texto
+  field.className = sessionStorage.getItem("autosave")
+}
 
-// for (const iterator of color_theme) {
-//   // console.log(iterator.checked)
-//   iterator.addEventListener("click", function () {
-//     // console.log(iterator.value)
-//     if (iterator.checked)
-//       body.className = iterator.value
-//   })
+// Verifica as mudanças que ocorrem na caixa de texto
+field.addEventListener("change", function () {
+  // E salva o resultado dentro de um objeto session storage
+  sessionStorage.setItem("autosave", field.className)
+})
+//----------------------------------------------------------------
 
-//}
+//--------------------------COUNTDOWN-----------------------------
 var deadline = new Date("nov 20, 2022 13:00:00").getTime()
 var limit = setInterval(function () {
   var now = new Date().getTime()
@@ -180,6 +183,13 @@ var limit = setInterval(function () {
     document.getElementById("timer").innerHTML = "A COPA COMEÇOU!"
   }
 }, 1000)
+
+//----------------------------------------------------------------
+
+//------------------------------EVENTS-----------------------------
+
+const flag_country = document.getElementsByClassName("country")
+const name_country = document.getElementsByClassName("name-country")
 
 for (let index = 0; index < flag_country.length; index++) {
   const this_flag = flag_country[index]

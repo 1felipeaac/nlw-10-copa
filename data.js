@@ -441,10 +441,41 @@ export function crateHeader(local) {
     <img src="./assets/logo.svg" alt="Logo da NLW">
     <nav><a href="./${local}.html"><button type="submit">ir para ${page}</button></a><div id="timer"></div></nav>
     
-    <!-- <div id="get_theme">
-      <input type="radio" name="theme" id="blue" value="blue"/> Blue
-      <input type="radio" name="theme" id="green" value="green"/> Green 
-    </div>-->
+    <div id="get_theme">
+      <label class="container" id="yellow">
+        <input type="radio" name="theme" id="yellow" value="yellow"/>
+        <span class="checkmark" id="span_yellow"></span>
+      </label>
+      <label class="container" id="blue">
+        <input type="radio" name="theme" id="blue" value="blue"/>
+        <span class="checkmark" id="span_blue"></span>
+      </label>
+      <label class="container" id="green">
+        <input type="radio" name="theme" id="green" value="green"/>
+        <span class="checkmark" id="span_green"></span>
+      </label> 
+    </div>
   `
 }
+export function setTheme(){
+  const color_theme = document.querySelectorAll("input")
+  let body = document.querySelector("body")
+
+  for (const iterator of color_theme) {
+    // console.log(iterator.checked)
+    iterator.addEventListener("click", function () {
+      // console.log(iterator.value)
+      if (iterator.checked) body.className = iterator.value;
+    })
+  }
+  getTheme()
+}
+
+export function getTheme(){
+  document.querySelector("body").addEventListener("change", function () {
+    
+    localStorage.setItem("color", document.querySelector("body").className)
+  })
+}
+
 
