@@ -39,8 +39,8 @@ body * {
 }
 
 #trophy {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 
 #app,
@@ -266,7 +266,7 @@ table {
 }
 
 #get_theme {
-  display: none;
+  display: flex;
   position: absolute;
   min-width: fit-content;
   padding: 5px 16px;
@@ -283,9 +283,9 @@ table {
   background-color: var(--card_bg_color);
 }
 
-#dropdown:hover #get_theme {
+/* #dropdown:hover #get_theme {
   display: flex;
-}
+} */
 
 #drop-theme {
   padding: 5px;
