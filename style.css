@@ -100,7 +100,7 @@ nav{
   /* border: 1px groove var(--card_title_border_color); */
   padding: 10px;
   color: var(--card_color_primary);
-  font-size: xxx-large;
+  font-size: xx-large;
   box-shadow: -5px -10px 30px #e1e1e6, 6px 9px 15px var(--card_color_primary);
   width: fit-content;
   border-radius: 30px;
