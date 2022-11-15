@@ -1,9 +1,9 @@
-import { arrayGames } from "./data.js";
+import { arrayGames, crateHeader } from "./data.js"
 
 function createGame(player1, hour, player2, group) {
   return `
   <li>
-      <div class="info-country">
+      <div class="info-country">.
         <img class="country" src="./assets/icon-${player1}.svg" alt=""><span class="name-country">${player1}</span>
       </div>
       <div id="details">
@@ -43,18 +43,26 @@ function createCard(date, games) {
   `
 }
 
-function createCardGames(i){
-    return createGame(
-      arrayGames[i].country1,
-      arrayGames[i].hour,
-      arrayGames[i].country2,
-      arrayGames[i].group,
-      arrayGames[i].date
-    )
+function createCardGames(i) {
+  return createGame(
+    arrayGames[i].country1,
+    arrayGames[i].hour,
+    arrayGames[i].country2,
+    arrayGames[i].group,
+    arrayGames[i].date
+  )
 }
 
 document.querySelector("#cards").innerHTML =
-  createCard(arrayGames[0].date, createGame(arrayGames[0].country1, arrayGames[0].hour, arrayGames[0].country2, arrayGames[0].group)) +
+  createCard(
+    arrayGames[0].date,
+    createGame(
+      arrayGames[0].country1,
+      arrayGames[0].hour,
+      arrayGames[0].country2,
+      arrayGames[0].group
+    )
+  ) +
   createCard(
     arrayGames[1].date,
     createCardGames(1) + createCardGames(2) + createCardGames(3)
@@ -136,12 +144,42 @@ document.querySelector("#cards").innerHTML =
       createCardGames(46) +
       createCardGames(47)
   )
-// console.log(arrayCards)
-// import { arrayTable, createLine, createTable } from "./table";
 
-//events
-const flag_country = document.getElementsByClassName("country")
-const name_country = document.getElementsByClassName("name-country")
+document.querySelector("header").innerHTML = crateHeader("groups");
+
+
+const flag_country = document.getElementsByClassName("country");
+const name_country = document.getElementsByClassName("name-country");
+
+//FUTURE IMPLEMENTATION
+// const color_theme = document.querySelectorAll("input")
+// let body = document.querySelector("body")
+
+// for (const iterator of color_theme) {
+//   // console.log(iterator.checked)
+//   iterator.addEventListener("click", function () {
+//     // console.log(iterator.value)
+//     if (iterator.checked)
+//       body.className = iterator.value
+//   })
+
+//}
+var deadline = new Date("nov 20, 2022 13:00:00").getTime()
+var limit = setInterval(function () {
+  var now = new Date().getTime()
+  var time = deadline - now
+  var days = Math.floor(time / (1000 * 60 * 60 * 24))
+  var hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60))
+  var seconds = Math.floor((time % (1000 * 60)) / 1000)
+  document.getElementById("timer").innerHTML = `Faltam ${days}d ${hours}h ${minutes}m ${seconds}s`
+  // "Faltam "+
+  //   days + "d " + hours + "h " + minutes + "m " + seconds + "s "
+  if (time < 0) {
+    clearInterval(limit)
+    document.getElementById("timer").innerHTML = "A COPA COMEÇOU!"
+  }
+}, 1000)
 
 for (let index = 0; index < flag_country.length; index++) {
   const this_flag = flag_country[index]

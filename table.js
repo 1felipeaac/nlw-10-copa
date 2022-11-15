@@ -1,4 +1,4 @@
-import { arrayWorldCup } from "./data.js";
+import { arrayWorldCup, crateHeader } from "./data.js";
 
 //Functions constructors
 function createLine(country) {
@@ -112,6 +112,9 @@ document.getElementById("groups").innerHTML =
 
 
 // Events  
+
+document.querySelector("header").innerHTML = crateHeader("index");
+
 const headTableGroup = document.querySelectorAll("thead.theadGroup");
 // const headTableScout = document.querySelectorAll("thead.headScout");
 const tableScout = document.querySelectorAll("table.tableScout");
@@ -130,7 +133,7 @@ for (let index = 0; index < headTableGroup.length; index++) {
 
   const stringTableGroup = elementTableGroup.innerText
 
-  console.log(stringTableGroup);
+  // console.log(stringTableGroup);
   elementButtonGroup.addEventListener("click", event_click_tableScout)
   elementButtonScout.addEventListener("click", event_click_tableGroup)
 
@@ -145,4 +148,5 @@ for (let index = 0; index < headTableGroup.length; index++) {
     elementTableGroup.style.display = "table"
     elementTableScout.style.display = "none"
   }
+
 }

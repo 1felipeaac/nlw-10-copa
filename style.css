@@ -6,29 +6,29 @@
 }
 
 :root {
-  --card-title-border-color: #746615;
-  --card-color-primary: #f7dd43;
-  --card-bg-color: #1d1c19;
-  --bg-img: url(./assets/bg-yellow.svg);
+  --card_title_border_color: #746615;
+  --card_color_primary: #f7dd43;
+  --card_bg_color: #1d1c19;
+  --bg_img: url(./assets/bg-yellow.svg);
 }
 
 body.green {
-  --card-title-border-color: #047c3f;
-  --card-color-primary: #047c3f;
-  --card-bg-color: #1a1f1b;
-  --bg-img: url(./assets/bg-green.svg);
+  --card_title_border_color: #047c3f;
+  --card_color_primary: #047c3f;
+  --card_bg_color: #1a1f1b;
+  --bg_img: url(./assets/bg-green.svg);
 }
 
 body.blue {
-  --card-title-border-color: #338af3;
-  --card-color-primary: #338af3;
-  --card-bg-color: #202024;
-  --bg-img: url(./assets/bg-blue.svg);
+  --card_title_border_color: #338af3;
+  --card_color_primary: #338af3;
+  --card_bg_color: #202024;
+  --bg_img: url(./assets/bg-blue.svg);
 }
 
 body {
   background-color: #121214;
-  background-image: var(--bg-img);
+  background-image: var(--bg_img);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -51,7 +51,7 @@ table {
   padding: 32px 23px;
   text-align: center;
   background: #1d1c19;
-  border-bottom: 2px solid var(--card-color-primary);
+  border-bottom: 2px solid var(--card_color_primary);
   border-radius: 6px;
 }
 
@@ -89,6 +89,25 @@ table {
   width: 30px;
 }
 
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#timer{
+  /* border: 1px groove var(--card_title_border_color); */
+  padding: 10px;
+  color: var(--card_color_primary);
+  font-size: xxx-large;
+  box-shadow: -5px -10px 30px #e1e1e6, 6px 9px 15px var(--card_color_primary);
+  width: fit-content;
+  border-radius: 30px;
+
+
+
+}
 /*...........................................Tables Page*......................................*/
 
 table{
@@ -211,7 +230,7 @@ table {
 }
 
 .card ul li strong:first-child {
-  border-bottom: 1px solid var(--card-title-border-color);
+  border-bottom: 1px solid var(--card_title_border_color);
 }
 
 .card h2:hover,
@@ -224,7 +243,7 @@ table {
   gap: 16px;
   justify-content: center;
   padding: 8px 16px;
-  border: 1px solid var(--card-title-border-color);
+  border: 1px solid var(--card_title_border_color);
   border-radius: 6px;
   width: fit-content;
   margin-inline: auto;
@@ -247,7 +266,7 @@ table {
   display: none;
   text-align: center;
   text-transform: uppercase;
-  color: var(--card-title-border-color);
+  color: var(--card_title_border_color);
   font-size: 10px;
 }
 
@@ -263,9 +282,9 @@ table {
 }
 /*...............................................Button......................................*/
 button{
-  border: 1px outset var(--card-color-primary);
+  border: 1px outset var(--card_color_primary);
   text-align: center;
-  background-color: var(--card-bg-color);
+  background-color: var(--card_bg_color);
   border-radius: 6px;
   color: #e1e1e6;
   text-transform: uppercase;
@@ -276,8 +295,8 @@ button{
 .buttonScout, .buttonGroup{
   width: 269px;
   height: 50px;
-  border-bottom: 5px outset var(--card-color-primary);
-  border-left: 5px outset var(--card-color-primary);
+  border-bottom: 5px outset var(--card_color_primary);
+  border-left: 5px outset var(--card_color_primary);
 }
 
 .icon-button{

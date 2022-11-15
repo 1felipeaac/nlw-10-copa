@@ -57,39 +57,38 @@ export var arrayWorldCup = [
   },
 ]
 
-const qatar = arrayWorldCup[0].country1;
-const ecuador = arrayWorldCup[0].country2;
+const qatar = arrayWorldCup[0].country1
+const ecuador = arrayWorldCup[0].country2
 const senegal = arrayWorldCup[0].country3
 const netherlands = arrayWorldCup[0].country4
-const england = arrayWorldCup[1].country1;
-const iran = arrayWorldCup[1].country2;
-const united_states = arrayWorldCup[1].country3;
-const wales = arrayWorldCup[1].country4;
-const argentina = arrayWorldCup[2].country1;
+const england = arrayWorldCup[1].country1
+const iran = arrayWorldCup[1].country2
+const united_states = arrayWorldCup[1].country3
+const wales = arrayWorldCup[1].country4
+const argentina = arrayWorldCup[2].country1
 const saudi_arabia = arrayWorldCup[2].country2
-const mexico = arrayWorldCup[2].country3;
-const poland = arrayWorldCup[2].country4;
-const france = arrayWorldCup[3].country1;
-const australia = arrayWorldCup[3].country2;
+const mexico = arrayWorldCup[2].country3
+const poland = arrayWorldCup[2].country4
+const france = arrayWorldCup[3].country1
+const australia = arrayWorldCup[3].country2
 const denmark = arrayWorldCup[3].country3
-const tunisia = arrayWorldCup[3].country4;
-const spain = arrayWorldCup[4].country1;
-const costa_rica = arrayWorldCup[4].country2;
+const tunisia = arrayWorldCup[3].country4
+const spain = arrayWorldCup[4].country1
+const costa_rica = arrayWorldCup[4].country2
 const germany = arrayWorldCup[4].country3
-const japan = arrayWorldCup[4].country4;
-const belgium = arrayWorldCup[5].country1;
-const canada = arrayWorldCup[5].country2;
-const morocco = arrayWorldCup[5].country3;
+const japan = arrayWorldCup[4].country4
+const belgium = arrayWorldCup[5].country1
+const canada = arrayWorldCup[5].country2
+const morocco = arrayWorldCup[5].country3
 const croatia = arrayWorldCup[5].country4
-const brazil = arrayWorldCup[6].country1;
-const serbia = arrayWorldCup[6].country2;
-const switzerland = arrayWorldCup[6].country3;
-const cameroon = arrayWorldCup[6].country4;
-const portugal = arrayWorldCup[7].country1;
-const ghana = arrayWorldCup[7].country2;
-const uruguay = arrayWorldCup[7].country3;
-const south_korea = arrayWorldCup[7].country4;
-
+const brazil = arrayWorldCup[6].country1
+const serbia = arrayWorldCup[6].country2
+const switzerland = arrayWorldCup[6].country3
+const cameroon = arrayWorldCup[6].country4
+const portugal = arrayWorldCup[7].country1
+const ghana = arrayWorldCup[7].country2
+const uruguay = arrayWorldCup[7].country3
+const south_korea = arrayWorldCup[7].country4
 
 export const arrayGames = [
   {
@@ -429,3 +428,23 @@ export const arrayGames = [
     country2: brazil,
   },
 ]
+
+export function crateHeader(local) {
+  let page = ""
+  if (local == "index") {
+    page = "datas"
+  } else {
+    page = "grupos"
+  }
+
+  return `
+    <img src="./assets/logo.svg" alt="Logo da NLW">
+    <nav><a href="./${local}.html"><button type="submit">ir para ${page}</button></a><div id="timer"></div></nav>
+    
+    <!-- <div id="get_theme">
+      <input type="radio" name="theme" id="blue" value="blue"/> Blue
+      <input type="radio" name="theme" id="green" value="green"/> Green 
+    </div>-->
+  `
+}
+
