@@ -116,24 +116,21 @@ document.getElementById("groups").innerHTML =
 document.querySelector("header").innerHTML = crateHeader("index");
 
 const headTableGroup = document.querySelectorAll("thead.theadGroup");
-// const headTableScout = document.querySelectorAll("thead.headScout");
 const tableScout = document.querySelectorAll("table.tableScout");
 const tableGroup = document.querySelectorAll("table.tableGroup");
 const buttonGroup = document.querySelectorAll("button.buttonGroup")
 const buttonScout = document.querySelectorAll("button.buttonScout");
 
 for (let index = 0; index < headTableGroup.length; index++) {
-  // const elementGroup = headTableGroup[index]
-  // const elementToggleGroup = tableGroup[index]
-  // const elementScout = headTableScout[index];
   const elementTableGroup = tableGroup[index]
   const elementTableScout = tableScout[index]
   const elementButtonScout = buttonScout[index]
   const elementButtonGroup = buttonGroup[index]
 
-  const stringTableGroup = elementTableGroup.innerText
+  document.querySelector("#timer").style.visibility = "hidden";
+  document.querySelector("nav").style.gap = "0"
 
-  // console.log(stringTableGroup);
+
   elementButtonGroup.addEventListener("click", event_click_tableScout)
   elementButtonScout.addEventListener("click", event_click_tableGroup)
 
