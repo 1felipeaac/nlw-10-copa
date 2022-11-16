@@ -1,4 +1,4 @@
-import { arrayWorldCup, crateHeader, setTheme } from "./data.js"
+import { arrayWorldCup, crateHeader, createFooter } from "./data.js"
 
 //Functions constructors
 function createLine(country) {
@@ -112,7 +112,7 @@ const GroupH = createTableGroup(7)
 //Build Page
 document.getElementById("groups").innerHTML =
   GroupA + GroupB + GroupC + GroupD + GroupE + GroupF + GroupG + GroupH
-
+document.querySelector("footer").innerHTML = createFooter()
 // Events
 
 document.querySelector("header").innerHTML = crateHeader("index")

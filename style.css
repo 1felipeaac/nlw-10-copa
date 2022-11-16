@@ -39,15 +39,21 @@ body * {
 }
 
 #trophy {
+  margin-top: 35px;
   height: 150px;
   width: 150px;
+}
+
+#logo-nlw{
+  height: 100px;
+  width: 100px;
 }
 
 #app,
 #appGroup {
   width: fit-content;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 10px;
   /* border: 1px solid red; */
 }
 
@@ -115,6 +121,34 @@ nav {
   width: fit-content;
   border-radius: 30px;
 }
+
+.div-footer{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: small;
+  gap: 1rem;
+}
+
+.ul-footer{
+  list-style: none;
+  font-style: italic;
+}
+
+.ul-footer:first-child{
+  color: #e1e1e6;
+}
+
+
+a:visited, a:link ,li a:visited{
+  color: #e1e1e6;
+}
+
+.ul-footer li a:hover{
+background-color: var(--card_title_border_color);
+}
 /*...........................................Tables Page*......................................*/
 
 table {
@@ -123,8 +157,13 @@ table {
 }
 
 header {
-  margin-bottom: 63px;
+  margin-bottom: 50px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 
 td {
@@ -266,9 +305,9 @@ table {
 }
 
 #get_theme {
-  display: flex;
+  display: none;
   position: absolute;
-  min-width: fit-content;
+  width: fit-content;
   padding: 5px 16px;
   align-content: center;
   z-index: 1;
@@ -278,20 +317,26 @@ table {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border: 1px outset var(--card_color_primary);
   border-radius: 5px;
-  background-color: var(--card_bg_color);
 }
 
-/* #dropdown:hover #get_theme {
-  display: flex;
-} */
+#arrow {
+  height: 20px;
+  width: auto;
+  animation: pulse 1s infinite ease-in-out alternate;
+}
 
 #drop-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   color: #e1e1e6;
   text-transform: uppercase;
   font-size: small;
+  line-height: 0;
+  gap: 0.5rem;
+  width: 147px;
 }
 
 .container {
@@ -403,6 +448,26 @@ button {
 .icon-button {
   height: 40px;
   width: 50px;
+}
+
+#button-theme {
+  border: none;
+  background: none;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  gap: 0.5rem;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
 
 /*............................Toggle Switch.......................*/

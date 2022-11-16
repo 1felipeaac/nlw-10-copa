@@ -1,4 +1,4 @@
-import { arrayGames, crateHeader, setTheme } from "./data.js"
+import { arrayGames, crateHeader, setTheme, createFooter } from "./data.js"
 
 function createGame(player1, hour, player2, group) {
   return `
@@ -145,10 +145,11 @@ document.querySelector("#cards").innerHTML =
       createCardGames(47)
   )
 
-document.querySelector("header").innerHTML = crateHeader("groups");
+// document.querySelector("body").innerHTML
+document.querySelector("header").innerHTML = crateHeader("groups")
+document.querySelector("footer").innerHTML = createFooter()
 
-
-setTheme();
+setTheme()
 //----------------------- SAVE CLASSNAME ----------------------
 var field = document.querySelector("body")
 
@@ -175,7 +176,9 @@ var limit = setInterval(function () {
   var hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
   var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60))
   var seconds = Math.floor((time % (1000 * 60)) / 1000)
-  document.getElementById("timer").innerHTML = `Faltam ${days}d ${hours}h ${minutes}m ${seconds}s`
+  document.getElementById(
+    "timer"
+  ).innerHTML = `Faltam ${days}d ${hours}h ${minutes}m ${seconds}s`
   // "Faltam "+
   //   days + "d " + hours + "h " + minutes + "m " + seconds + "s "
   if (time < 0) {
@@ -209,3 +212,14 @@ for (let index = 0; index < flag_country.length; index++) {
     this_flag.style.transform = "scale(1)"
   }
 }
+
+const button_theme = document.getElementById("button-theme")
+
+button_theme.addEventListener("click", function () {
+  document.getElementById("get_theme").style.display = "flex"
+  document
+    .getElementById("get_theme")
+    .addEventListener("click", function () {
+      document.getElementById("get_theme").style.display = "none"
+    })
+})

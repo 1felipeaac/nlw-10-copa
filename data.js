@@ -438,10 +438,8 @@ export function crateHeader(local) {
   }
 
   return `
-    <img id="trophy" src="./assets/logo-world-cup.svg" alt="Taça da Copa do Mundo">
-    <nav><a href="./${local}.html"><button type="submit">ir para ${page}</button></a><div id="timer"></div></nav>
     <div id="dropdown">
-      <strong id="drop-theme">Escolha seu tema</strong>
+      <strong id="drop-theme"><button id="button-theme" type="submit">Tema <img id="arrow" src="./assets/icon-arrow.svg" alt="arrow"></button></strong>
       <div id="get_theme">
         <label class="container" id="yellow">
           <input type="radio" name="theme" id="yellow" value="yellow"/>
@@ -457,6 +455,24 @@ export function crateHeader(local) {
         </label> 
       </div>
     </div>
+    <img id="trophy" src="./assets/logo-world-cup.svg" alt="Taça da Copa do Mundo">
+    <nav><a href="./${local}.html"><button type="submit">ir para ${page}</button></a><div id="timer"></div></nav>
+  `
+}
+
+export function createFooter() {
+  return `
+  <div class="div-footer">
+    <adress>
+      <ul class="ul-footer">
+          <li>Felipe Coelho</li>
+          <li><a href="mailto:felipeaacoelho@gmail.com">felipeaacoelho@gmail.com</a></li>
+          <li><a href="tel:+5586999642604">(86)9 99642604</a></li>
+      </ul>
+    </adress>
+    <a href="https://www.rocketseat.com.br/">Site inspirado no Projeto NLW-10-Copa: Rocketseat</a>
+    <img id="logo-nlw" src="./assets/logo.svg" alt="NLW-10-Copa">
+  </div>
   `
 }
 export function setTheme() {
