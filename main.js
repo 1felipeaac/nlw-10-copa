@@ -1,9 +1,19 @@
-import { arrayGames, crateHeader, setTheme, createFooter } from "./data.js"
+import {
+  arrayGames,
+  crateHeader,
+  setTheme,
+  createFooter,
+  Players,
+} from "./data.js"
+
+// const italia = new Players("italia");
+
+// console.log(italia.getCountry())
 
 function createGame(player1, hour, player2, group) {
   return `
   <li>
-      <div class="info-country">.
+      <div class="info-country">
         <img class="country" src="./assets/icon-${player1}.svg" alt=""><span class="name-country">${player1}</span>
       </div>
       <div id="details">
@@ -217,9 +227,7 @@ const button_theme = document.getElementById("button-theme")
 
 button_theme.addEventListener("click", function () {
   document.getElementById("get_theme").style.display = "flex"
-  document
-    .getElementById("get_theme")
-    .addEventListener("click", function () {
-      document.getElementById("get_theme").style.display = "none"
-    })
+  document.getElementById("get_theme").addEventListener("click", function () {
+    document.getElementById("get_theme").style.display = "none"
+  })
 })
