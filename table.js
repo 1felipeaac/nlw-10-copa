@@ -33,17 +33,17 @@ function createTable(group, line, lineScout) {
   )
 }
 
-function createLineScout(country, pts, played, win, draws, loss, gFor, gAgainst, gDifference) {
-  return `<tr class="tr-tbody-scout">
+function createLineScout(country) {
+  return `<tr class="tr-tbody-scout" id="${country}">
     <th><img class="scoutCountry" src="./assets/icon-${country}.svg" alt=""></th>
-    <td id="pts">${pts}</td> <!-- pontos -->
-    <td id="played">${played}</td> <!-- jogos -->
-    <td id="win">${win}</td> <!-- vitorias -->
-    <td id="draws">${draws}</td> <!-- empates -->
-    <td id="loss">${loss}</td> <!-- derrotas -->
-    <td id="gFor">${gFor}</td> <!-- Gols Pro -->
-    <td id="gAgainst">${gAgainst}</td> <!-- Gols Contra -->
-    <td id="gDifference">${gDifference}</td> <!-- Saldo de Gols --> 
+    <td id="pts">0</td> <!-- pontos -->
+    <td id="played">0</td> <!-- jogos -->
+    <td id="win">0</td> <!-- vitorias -->
+    <td id="draws">0</td> <!-- empates -->
+    <td id="loss">0</td> <!-- derrotas -->
+    <td id="gFor">0</td> <!-- Gols Pro -->
+    <td id="gAgainst">0</td> <!-- Gols Contra -->
+    <td id="gDifference">0</td> <!-- Saldo de Gols --> 
   </tr>`
 }
 
@@ -82,10 +82,10 @@ function createTableGroup(i) {
       createLine(arrayWorldCup[i].country2) +
       createLine(arrayWorldCup[i].country3) +
       createLine(arrayWorldCup[i].country4),
-    createLineScout(arrayWorldCup[i].country1, 0, 0, 0, 0, 0, 0, 0, 0) +
-      createLineScout(arrayWorldCup[i].country2, 0, 0, 0, 0, 0, 0, 0, 0) +
-      createLineScout(arrayWorldCup[i].country3, 0, 0, 0, 0, 0, 0, 0, 0) +
-      createLineScout(arrayWorldCup[i].country4, 0, 0, 0, 0, 0, 0, 0, 0)
+    createLineScout(arrayWorldCup[i].country1) +
+      createLineScout(arrayWorldCup[i].country2) +
+      createLineScout(arrayWorldCup[i].country3) +
+      createLineScout(arrayWorldCup[i].country4)
   )
 }
 
@@ -99,23 +99,92 @@ const GroupF = createTableGroup(5)
 const GroupG = createTableGroup(6)
 const GroupH = createTableGroup(7)
 
-// ----------------FUNÇÃO PARA PREENCHER TABELA----------------------
-// console.log(document.getElementsByClassName("tr-tbody-scout"))
-
-// const tables = document.getElementsByClassName("tr-tbody-scout")
-// for(const i = 0; i < tables.length; i++){
-//   const element = tables[i];
-
-// }
-//-------------------------------------------------------------------
 
 //Build Page
 document.getElementById("groups").innerHTML =
   GroupA + GroupB + GroupC + GroupD + GroupE + GroupF + GroupG + GroupH
 document.querySelector("footer").innerHTML = createFooter()
-// Events
 
-document.querySelector("header").innerHTML = crateHeader("index")
+
+// ----------------FUNÇÃO PARA PREENCHER TABELA----------------------
+//----------------------------Group A-------------------------
+const qatar = document.getElementById("qatar")
+const ecuador = document.getElementById("ecuador")
+const senegal = document.getElementById("senegal")
+const netherlands = document.getElementById("netherlands")
+
+fillScoutTable(qatar, 1, "loss",0,2)
+fillScoutTable(ecuador, 1, "win",2,0)
+fillScoutTable(senegal, 1, "loss", 0,0)
+fillScoutTable(netherlands, 1, "win", 2,0)
+//----------------------------Group B-------------------------
+const england = document.getElementById("england")
+const iran = document.getElementById("iran")
+const united_states = document.getElementById("united-states")
+const wales = document.getElementById("wales")
+
+fillScoutTable(england,1, "win",6,2)
+fillScoutTable(iran, 1, "loss",2,6)
+fillScoutTable(united_states, 1,"draw",1,1)
+fillScoutTable(wales, 1,"draw",1,1)
+
+//--------------------------------------------------------------
+
+console.log(england)
+
+function fillScoutTable(country, games, result, fGoals, aGoals){
+  let dGoals = fGoals - aGoals
+  result.toLowerCase
+  if (result == "win") {
+    country.cells[3].innerHTML = 1 //win
+    country.cells[4].innerHTML = 0 //draw
+    country.cells[5].innerHTML = 0 //loss
+    country.cells[1].innerHTML = 3
+  } else if (result == "draw") {
+    country.cells[3].innerHTML = 0 //win
+    country.cells[4].innerHTML = 1 //draw
+    country.cells[5].innerHTML = 0 //loss
+    country.cells[1].innerHTML = 1
+  } else if (result == "loss") {
+    country.cells[3].innerHTML = 0 //win
+    country.cells[4].innerHTML = 0 //draw
+    country.cells[5].innerHTML = 1 //loss
+    country.cells[1].innerHTML = 0
+  }
+  country.cells[2].innerHTML = games
+  country.cells[6].innerHTML = fGoals
+  country.cells[7].innerHTML = aGoals
+  country.cells[8].innerHTML = dGoals
+}
+
+
+//order table
+const tables = document.querySelectorAll(".tbodyScout")
+// console.log(tables[0])
+for(let i = 0; i < tables.length; i++){
+  const asc = false // ordem: ascendente ou descendente
+  const index = 1
+  const tabela = tables[i]
+  const arr = Array.from(
+    tabela.querySelectorAll("tbody tr")
+  )
+
+  arr.sort((a, b) => {
+    const a_val = a.children[index].innerText
+    const b_val = b.children[index].innerText
+    return asc ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
+  })
+  
+  arr.forEach((elem) => {
+    tabela.appendChild(elem)
+  })
+}
+
+
+  //-------------------------------------------------------------------
+  // Events
+
+  document.querySelector("header").innerHTML = crateHeader("index")
 document.querySelector("body").className = localStorage.getItem("color")
 
 const headTableGroup = document.querySelectorAll("thead.theadGroup")
@@ -149,3 +218,5 @@ for (let index = 0; index < headTableGroup.length; index++) {
     elementTableScout.style.display = "none"
   }
 }
+
+
