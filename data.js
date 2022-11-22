@@ -522,4 +522,7 @@ export function getTheme() {
   document.querySelector("body").addEventListener("change", function () {
     localStorage.setItem("color", document.querySelector("body").className)
   })
+  function expiredTime(){
+    localStorage.clear()
+  }setTimeout(expiredTime,15*60*1000)
 }

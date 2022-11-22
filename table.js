@@ -117,6 +117,7 @@ fillScoutTable(qatar, 1, "loss",0,2)
 fillScoutTable(ecuador, 1, "win",2,0)
 fillScoutTable(senegal, 1, "loss", 0,2)
 fillScoutTable(netherlands, 1, "win", 2,0)
+
 //----------------------------Group B-------------------------
 const england = document.getElementById("england")
 const iran = document.getElementById("iran")
@@ -126,11 +127,69 @@ const wales = document.getElementById("wales")
 fillScoutTable(england,1, "win",6,2)
 fillScoutTable(iran, 1, "loss",2,6)
 fillScoutTable(united_states, 1,"draw",1,1)
-fillScoutTable(wales, 1,"draw",1,1)
+fillScoutTable(wales, 1, "draw", 1, 1)
+
+//---------------------------Group C------------------------------
+const argentina = document.getElementById("argentina")
+const saudi_arabia = document.getElementById("saudi-arabia")
+const mexico = document.getElementById("mexico")
+const poland = document.getElementById("poland")
+
+fillScoutTable(argentina, 1, "loss", 1, 2)
+fillScoutTable(saudi_arabia, 1, "win", 2, 1)
+fillScoutTable(mexico, 1, "draw", 0, 0)
+fillScoutTable(poland, 1, "draw", 0, 0)
+
+//---------------------------Group D------------------------------
+const france = document.getElementById("france")
+const australia = document.getElementById("australia")
+const denmark = document.getElementById("denmark")
+const tunisia = document.getElementById("tunisia")
+
+fillScoutTable(france, 0, "empty", 0, 0)
+fillScoutTable(australia, 0, "empty", 0, 0)
+fillScoutTable(denmark, 0, "empty", 0, 0)
+fillScoutTable(tunisia, 0, "empty", 0, 0)
+// var gamesWales = [
+//   fillScoutTable(wales, 1, "draw", 1, 1),
+//   fillScoutTable(wales, 1, "win", 3, 0),
+//   fillScoutTable(wales, 1, "loss", 2, 3),
+// ]
+
+// console.log(gamesWales)
+
+// console.log(gamesWales[0][0])
+// console.log(gamesWales[1][0])
+// console.log(gamesWales[2][0])
+
+// const soma =
+//   parseInt(gamesWales[0][0]) +
+//   parseInt(gamesWales[1][0]) +
+//   parseInt(gamesWales[2][0])
+
+// console.log(soma)
+
+
 
 //--------------------------------------------------------------
 
-console.log(england)
+function fillArray(country){
+  const array = []
+  array.unshift(
+    country.cells[1].innerText,
+    country.cells[2].innerText,
+    country.cells[3].innerText,
+    country.cells[4].innerText,
+    country.cells[5].innerText,
+    country.cells[6].innerText,
+    country.cells[7].innerText,
+    country.cells[8].innerText
+  )
+
+  return array
+
+}
+
 
 function fillScoutTable(country, games, result, fGoals, aGoals){
   let dGoals = fGoals - aGoals
@@ -150,11 +209,18 @@ function fillScoutTable(country, games, result, fGoals, aGoals){
     country.cells[4].innerHTML = 0 //draw
     country.cells[5].innerHTML = 1 //loss
     country.cells[1].innerHTML = 0
+  }else{
+    country.cells[3].innerHTML = 0 //win
+    country.cells[4].innerHTML = 0 //draw
+    country.cells[5].innerHTML = 0 //loss
+    country.cells[1].innerHTML = 0
   }
   country.cells[2].innerHTML = games
   country.cells[6].innerHTML = fGoals
   country.cells[7].innerHTML = aGoals
   country.cells[8].innerHTML = dGoals
+
+  return fillArray(country)
 }
 
 
@@ -184,7 +250,7 @@ for(let i = 0; i < tables.length; i++){
   //-------------------------------------------------------------------
   // Events
 
-  document.querySelector("header").innerHTML = crateHeader("index")
+document.querySelector("header").innerHTML = crateHeader("index")
 document.querySelector("body").className = localStorage.getItem("color")
 
 const headTableGroup = document.querySelectorAll("thead.theadGroup")

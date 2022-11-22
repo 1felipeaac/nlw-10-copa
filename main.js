@@ -16,10 +16,12 @@ function createGame(player1, hour, player2, group) {
       <div class="info-country">
         <img class="country" src="./assets/icon-${player1}.svg" alt=""><span class="name-country">${player1}</span>
       </div>
+      <strong class="scoreBoard-${player1}"></strong>
       <div id="details">
         <strong>Grupo ${group}</strong>
         <strong>${hour}:00</strong>
       </div>
+      <strong class="scoreBoard-${player2}"></strong>
       <div class="info-country">
         <img class="country" src="./assets/icon-${player2}.svg" alt=""><span class="name-country">${player2}</span>
       </div>
@@ -162,7 +164,6 @@ document.querySelector("footer").innerHTML = createFooter()
 setTheme()
 //----------------------- SAVE CLASSNAME ----------------------
 var field = document.querySelector("body")
-
 // Se tivermos um valor salvo automaticamente
 // (isto só ocorrerá se a página for acidentalmente recarregada)
 if (sessionStorage.getItem("autosave")) {
@@ -199,6 +200,48 @@ var limit = setInterval(function () {
 
 //----------------------------------------------------------------
 
+//----------------------------SCOREBOARD---------------------------
+const qatarScore = document.getElementsByClassName("scoreBoard-qatar")
+qatarScore[0].innerHTML = 0
+
+const ecuadorScore = document.getElementsByClassName("scoreBoard-ecuador")
+ecuadorScore[0].innerHTML = 2
+
+const englanScore = document.getElementsByClassName("scoreBoard-england")
+englanScore[0].innerHTML = 6
+
+const iranScore = document.getElementsByClassName("scoreBoard-iran")
+iranScore[0].innerHTML = 2
+
+const senegalScore = document.getElementsByClassName("scoreBoard-senegal")
+senegalScore[0].innerHTML = 0
+
+const netherlandsScore = document.getElementsByClassName("scoreBoard-netherlands")
+netherlandsScore[0].innerHTML = 2
+
+const united_statesScore = document.getElementsByClassName("scoreBoard-united-states")
+united_statesScore[0].innerHTML = 1
+
+const walesScore = document.getElementsByClassName("scoreBoard-wales")
+walesScore[0].innerHTML = 1
+
+const argentinaScore = document.getElementsByClassName("scoreBoard-argentina")
+argentinaScore[0].innerHTML = 1
+
+const saudi_arabiaScore = document.getElementsByClassName("scoreBoard-saudi-arabia")
+saudi_arabiaScore[0].innerHTML = 2
+
+const denmarkScore = document.getElementsByClassName("scoreBoard-denmark")
+denmarkScore[0].innerHTML = 0
+
+const tunisiaScore = document.getElementsByClassName("scoreBoard-tunisia")
+tunisiaScore[0].innerHTML = 0
+
+const mexicoScore = document.getElementsByClassName("scoreBoard-mexico")
+mexicoScore[0].innerHTML = 0
+
+const polandScore = document.getElementsByClassName("scoreBoard-poland")
+polandScore[0].innerHTML = 0
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")
