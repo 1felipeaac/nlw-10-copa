@@ -115,7 +115,7 @@ const netherlands = document.getElementById("netherlands")
 
 fillScoutTable(qatar, 1, "loss",0,2)
 fillScoutTable(ecuador, 1, "win",2,0)
-fillScoutTable(senegal, 1, "loss", 0,0)
+fillScoutTable(senegal, 1, "loss", 0,2)
 fillScoutTable(netherlands, 1, "win", 2,0)
 //----------------------------Group B-------------------------
 const england = document.getElementById("england")
