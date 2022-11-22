@@ -242,6 +242,12 @@ mexicoScore[0].innerHTML = 0
 
 const polandScore = document.getElementsByClassName("scoreBoard-poland")
 polandScore[0].innerHTML = 0
+
+const franceScore = document.getElementsByClassName("scoreBoard-france")
+franceScore[0].innerHTML = 0
+
+const australiaScore = document.getElementsByClassName("scoreBoard-australia")
+australiaScore[0].innerHTML = 0
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")
