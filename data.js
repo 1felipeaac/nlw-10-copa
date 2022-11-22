@@ -1,16 +1,7 @@
 export var arrayWorldCup = [
   {
     group: "a",
-    country1: {
-      country:"qatar",
-      game: 0,
-      winner: 0,
-      loss: 0,
-      draw: 0,
-      points: 0,
-      aGoals: 0,
-      fGoals: 0,
-    },
+    country1: "qatar",
     country2: "ecuador",
     country3: "senegal",
     country4: "netherlands",
@@ -94,8 +85,7 @@ export class Players {
 
 }
 
-const qatar = arrayWorldCup[0].country1.country
-// var qatar = new Players("qatar");
+const qatar = arrayWorldCup[0].country1
 const ecuador = arrayWorldCup[0].country2
 const senegal = arrayWorldCup[0].country3
 const netherlands = arrayWorldCup[0].country4
