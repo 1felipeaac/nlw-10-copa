@@ -146,15 +146,38 @@ const australia = document.getElementById("australia")
 const denmark = document.getElementById("denmark")
 const tunisia = document.getElementById("tunisia")
 
-fillScoutTable(france, 0, "empty", 0, 0)
-fillScoutTable(australia, 0, "empty", 0, 0)
-fillScoutTable(denmark, 0, "empty", 0, 0)
-fillScoutTable(tunisia, 0, "empty", 0, 0)
-// var gamesWales = [
-//   fillScoutTable(wales, 1, "draw", 1, 1),
-//   fillScoutTable(wales, 1, "win", 3, 0),
-//   fillScoutTable(wales, 1, "loss", 2, 3),
-// ]
+fillScoutTable(france, 1, "win", 4, 1)
+fillScoutTable(australia, 1, "loss", 1, 4)
+fillScoutTable(denmark, 1, "draw", 0, 0)
+fillScoutTable(tunisia, 1, "draw", 0, 0)
+
+//---------------------------Group E------------------------------
+const spain = document.getElementById("spain")
+const costa_rica = document.getElementById("costa-rica")
+const germany = document.getElementById("germany")
+const japan = document.getElementById("japan")
+
+fillScoutTable(spain, 0, "empty", 0, 0)
+fillScoutTable(costa_rica, 0, "empty", 0, 0)
+fillScoutTable(germany, 1, "loss", 1, 2)
+fillScoutTable(japan, 1, "win", 2, 1)
+
+//---------------------------Group F------------------------------
+const belgium = document.getElementById("belgium")
+const canada = document.getElementById("canada")
+const morocco = document.getElementById("morocco")
+const croatia = document.getElementById("croatia")
+
+fillScoutTable(belgium, 0, "empty", 0,0)
+fillScoutTable(canada, 0, "empty", 0, 0)
+fillScoutTable(morocco, 1, "draw", 0, 0)
+fillScoutTable(croatia, 1, "draw", 0, 0)
+
+var gamesWales = [
+  fillScoutTable(wales, 1, "draw", 1, 1),
+  fillScoutTable(wales, 1, "win", 3, 0),
+  fillScoutTable(wales, 1, "loss", 2, 3),
+]
 
 // console.log(gamesWales)
 
@@ -167,7 +190,10 @@ fillScoutTable(tunisia, 0, "empty", 0, 0)
 //   parseInt(gamesWales[1][0]) +
 //   parseInt(gamesWales[2][0])
 
-// console.log(soma)
+// console.log(soma+" pontos")
+
+
+  
 
 
 
@@ -226,23 +252,27 @@ function fillScoutTable(country, games, result, fGoals, aGoals){
 
 //order table
 const tables = document.querySelectorAll(".tbodyScout")
-// console.log(tables[0])
+
 for(let i = 0; i < tables.length; i++){
   const asc = false // ordem: ascendente ou descendente
-  const index = 1
-  const tabela = tables[i]
+  var index = 1
+  const table = tables[i]
   const arr = Array.from(
-    tabela.querySelectorAll("tbody tr")
+    table.querySelectorAll("tbody tr")
   )
 
   arr.sort((a, b) => {
-    const a_val = a.children[index].innerText
-    const b_val = b.children[index].innerText
+    var a_val = a.children[index].innerText
+    var b_val = b.children[index].innerText
+    if (a_val == b_val){
+      a_val = a.lastElementChild.innerText
+      b_val = b.lastElementChild.innerText
+    }
     return asc ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
   })
   
   arr.forEach((elem) => {
-    tabela.appendChild(elem)
+    table.appendChild(elem)
   })
 }
 

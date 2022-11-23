@@ -244,10 +244,22 @@ const polandScore = document.getElementsByClassName("scoreBoard-poland")
 polandScore[0].innerHTML = 0
 
 const franceScore = document.getElementsByClassName("scoreBoard-france")
-franceScore[0].innerHTML = 0
+franceScore[0].innerHTML = 4
 
 const australiaScore = document.getElementsByClassName("scoreBoard-australia")
-australiaScore[0].innerHTML = 0
+australiaScore[0].innerHTML = 1
+
+const moroccoScore = document.getElementsByClassName("scoreBoard-morocco")
+moroccoScore[0].innerHTML = 0
+
+const croatiaScore = document.getElementsByClassName("scoreBoard-croatia")
+croatiaScore[0].innerHTML = 0
+
+const germanyScore = document.getElementsByClassName("scoreBoard-germany")
+germanyScore[0].innerHTML = 1
+
+const japanScore = document.getElementsByClassName("scoreBoard-japan")
+japanScore[0].innerHTML = 2
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")
