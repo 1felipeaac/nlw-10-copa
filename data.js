@@ -56,35 +56,6 @@ export var arrayWorldCup = [
     country4: "south-korea",
   },
 ]
-
-export class Players {
-  constructor(country, game, win, loss, draw, aGoals, fGoals) {
-    this.country = country
-    this.game = game
-    this.win = win
-    this.loss = loss,
-    this.draw = draw,
-    this.aGoals = aGoals,
-    this.fGoals = fGoals
-  }
-  get countryName() {
-      return this.country;
-  };
-
-  get dGoals(){
-    return this.#calcDiferenceGoals
-  }
-  
-  #calcDiferenceGoals(){
-    return this.fGoals - this.aGoals
-  }
-
-  get points(){
-
-  }
-
-}
-
 const qatar = arrayWorldCup[0].country1
 const ecuador = arrayWorldCup[0].country2
 const senegal = arrayWorldCup[0].country3
@@ -117,7 +88,6 @@ const portugal = arrayWorldCup[7].country1
 const ghana = arrayWorldCup[7].country2
 const uruguay = arrayWorldCup[7].country3
 const south_korea = arrayWorldCup[7].country4
-
 
 export const arrayGames = [
   {

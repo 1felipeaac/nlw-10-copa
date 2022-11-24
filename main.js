@@ -3,7 +3,6 @@ import {
   crateHeader,
   setTheme,
   createFooter,
-  Players,
 } from "./data.js"
 
 // const italia = new Players("italia");
@@ -194,7 +193,7 @@ var limit = setInterval(function () {
   //   days + "d " + hours + "h " + minutes + "m " + seconds + "s "
   if (time < 0) {
     clearInterval(limit)
-    document.getElementById("timer").innerHTML = "A COPA COMEÇOU!"
+    document.getElementById("timer").style.display = "none"
   }
 }, 1000)
 
@@ -272,6 +271,18 @@ belgiumScore[0].innerHTML = 1
 
 const canadaScore = document.getElementsByClassName("scoreBoard-canada")
 canadaScore[0].innerHTML = 0
+
+const switzerlandScore = document.getElementsByClassName("scoreBoard-switzerland")
+switzerlandScore[0].innerHTML = 1
+
+const cameroonScore = document.getElementsByClassName("scoreBoard-cameroon")
+cameroonScore[0].innerHTML = 0
+
+const south_koreaScore = document.getElementsByClassName("scoreBoard-south-korea")
+south_koreaScore[0].innerHTML = 0
+
+const uruguayScore = document.getElementsByClassName("scoreBoard-uruguay")
+uruguayScore[0].innerHTML = 0
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")

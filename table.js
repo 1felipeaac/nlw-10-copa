@@ -115,16 +115,22 @@ setTimeout(expiredTime, 15 * 60 * 1000)
 // ----------------FUNÇÃO PARA PREENCHER TABELA----------------------
 //----------------------------Group A-------------------------
 
-
 const qatar = document.getElementById("qatar")
 const ecuador = document.getElementById("ecuador")
 const senegal = document.getElementById("senegal")
 const netherlands = document.getElementById("netherlands")
 
-fillScoutTable(qatar, 1, "loss",0,2)
-fillScoutTable(ecuador, 1, "win",2,0)
-fillScoutTable(senegal, 1, "loss", 0,2)
-fillScoutTable(netherlands, 1, "win", 2,0)
+const qatarGames = [fillScoutTable(0, 2)]
+allGames(qatar, qatarGames)
+
+const ecuadorGames= [fillScoutTable(2,0)]
+allGames(ecuador, ecuadorGames)
+
+const senagalGames = [fillScoutTable(0,2)]
+allGames(senegal, senagalGames)
+
+const netherlandsGames = [fillScoutTable(2,0)]
+allGames(netherlands, netherlandsGames)
 
 //----------------------------Group B-------------------------
 const england = document.getElementById("england")
@@ -132,10 +138,17 @@ const iran = document.getElementById("iran")
 const united_states = document.getElementById("united-states")
 const wales = document.getElementById("wales")
 
-fillScoutTable(england,1, "win",6,2)
-fillScoutTable(iran, 1, "loss",2,6)
-fillScoutTable(united_states, 1,"draw",1,1)
-fillScoutTable(wales, 1, "draw", 1, 1)
+const englandGames = [fillScoutTable(6,2)]
+allGames(england, englandGames)
+
+const iranGames = [fillScoutTable(2,6)]
+allGames(iran, iranGames)
+
+const united_statesGames = [fillScoutTable(1,1)]
+allGames(united_states, united_statesGames)
+
+const walesGames = [fillScoutTable(1, 1)]
+allGames(wales, walesGames)
 
 //---------------------------Group C------------------------------
 const argentina = document.getElementById("argentina")
@@ -143,10 +156,17 @@ const saudi_arabia = document.getElementById("saudi-arabia")
 const mexico = document.getElementById("mexico")
 const poland = document.getElementById("poland")
 
-fillScoutTable(argentina, 1, "loss", 1, 2)
-fillScoutTable(saudi_arabia, 1, "win", 2, 1)
-fillScoutTable(mexico, 1, "draw", 0, 0)
-fillScoutTable(poland, 1, "draw", 0, 0)
+const argentinaGames = [fillScoutTable(1, 2)]
+allGames(argentina, argentinaGames)
+
+const saudi_arabiaGames = [fillScoutTable(2, 1)]
+allGames(saudi_arabia, saudi_arabiaGames)
+
+const mexicoGames = [fillScoutTable(0, 0)]
+allGames(mexico, mexicoGames)
+
+const polandGames = [fillScoutTable(0, 0)]
+allGames(poland, polandGames)
 
 //---------------------------Group D------------------------------
 const france = document.getElementById("france")
@@ -154,10 +174,17 @@ const australia = document.getElementById("australia")
 const denmark = document.getElementById("denmark")
 const tunisia = document.getElementById("tunisia")
 
-fillScoutTable(france, 1, "win", 4, 1)
-fillScoutTable(australia, 1, "loss", 1, 4)
-fillScoutTable(denmark, 1, "draw", 0, 0)
-fillScoutTable(tunisia, 1, "draw", 0, 0)
+const franceGames = [fillScoutTable(4, 1)]
+allGames(france, franceGames)
+
+const australiaGames = [fillScoutTable(1, 4)]
+allGames(australia, australiaGames)
+
+const denmarkGames = [fillScoutTable(0, 0)]
+allGames(denmark, denmarkGames)
+
+const tunisiaGames = [fillScoutTable(0, 0)]
+allGames(tunisia, tunisiaGames)
 
 //---------------------------Group E------------------------------
 const spain = document.getElementById("spain")
@@ -165,10 +192,17 @@ const costa_rica = document.getElementById("costa-rica")
 const germany = document.getElementById("germany")
 const japan = document.getElementById("japan")
 
-fillScoutTable(spain, 1, "win", 7, 0)
-fillScoutTable(costa_rica, 1, "loss", 0, 7)
-fillScoutTable(germany, 1, "loss", 1, 2)
-fillScoutTable(japan, 1, "win", 2, 1)
+const spainGames = [fillScoutTable(7, 0)]
+allGames(spain, spainGames)
+
+const costa_ricaGames = [fillScoutTable(0, 7)]
+allGames(costa_rica, costa_ricaGames)
+
+const germanyGames = [fillScoutTable(1, 2)]
+allGames(germany, germanyGames)
+
+const japanGames = [fillScoutTable(2, 1)]
+allGames(japan, japanGames)
 
 //---------------------------Group F------------------------------
 const belgium = document.getElementById("belgium")
@@ -176,46 +210,74 @@ const canada = document.getElementById("canada")
 const morocco = document.getElementById("morocco")
 const croatia = document.getElementById("croatia")
 
-fillScoutTable(belgium, 1, "win", 1,0)
-fillScoutTable(canada, 1, "loss", 0, 1)
-fillScoutTable(morocco, 1, "draw", 0, 0)
-fillScoutTable(croatia, 1, "draw", 0, 0)
+const belgiumGames = [fillScoutTable(1,0)]
+allGames(belgium, belgiumGames)
 
-// var gamesWales = [
-//   fillScoutTable(wales, 1, "draw", 1, 1),
-//   fillScoutTable(wales, 1, "win", 3, 0),
-//   fillScoutTable(wales, 1, "loss", 2, 3),
-// ]
+const canadaGames = [fillScoutTable(0, 1)]
+allGames(canada, canadaGames)
 
-// console.log(gamesWales)
+const moroccoGames = [fillScoutTable(0, 0)]
+allGames(morocco, moroccoGames)
 
-function allGames(gamesCountry){
+const croatiaGames = [fillScoutTable(0, 0)]
+allGames(croatia, croatiaGames)
+
+//---------------------------Group G------------------------------
+const switzerland = document.getElementById("switzerland")
+const cameroon = document.getElementById("cameroon")
+const brazil = document.getElementById("brazil")
+const serbia = document.getElementById("serbia")
+
+const switzerlandGames = [fillScoutTable(1,0)]
+allGames(switzerland, switzerlandGames)
+
+const cameroonGames = [fillScoutTable(0,1)]
+allGames(cameroon, cameroonGames)
+
+const brazilGames = [fillScoutTable(0, 0)]
+
+const serbiaGames = [fillScoutTable(0, 0)]
+
+//---------------------------Group G------------------------------
+const south_korea = document.getElementById("south-korea")
+const ghana = document.getElementById("ghana")
+const uruguay = document.getElementById("uruguay")
+const portugal = document.getElementById("portugal")
+
+const south_koreaGames = [fillScoutTable(0,0)]
+allGames(south_korea, south_koreaGames)
+
+const ghanaGames = [fillScoutTable(0,0)]
+// allGames(ghana, ghanaGames)
+
+const uruguayGames = [fillScoutTable(0,0)]
+allGames(uruguay, uruguayGames)
+
+const portugalGames = [fillScoutTable(0,0)]
+// allGames(portugal, portugalGames)
+
+function allGames(country, games){
   const arrPoints = []
-  const arrGames = []
   const arrWin = []
   const arrDraw = []
   const arrLoss = []
   const arrFGoals = []
   const arrAGoals = []
   const arrDGoals = []
-  const arrAllGames = []
 
-  for (let i = 0; i < gamesCountry.length; i++) {
-    const element = gamesCountry[i]
+  for (let i = 0; i < games.length; i++) {
+    const element = games[i]
     arrPoints.unshift(parseInt(element[0]))
-    arrGames.unshift(parseInt(element[1]))
-    arrWin.unshift(parseInt(element[2]))
-    arrDraw.unshift(parseInt(element[3]))
-    arrLoss.unshift(parseInt(element[4]))
-    arrFGoals.unshift(parseInt(element[5]))
-    arrAGoals.unshift(parseInt(element[7]))
+    arrWin.unshift(parseInt(element[1]))
+    arrDraw.unshift(parseInt(element[2]))
+    arrLoss.unshift(parseInt(element[3]))
+    arrFGoals.unshift(parseInt(element[4]))
+    arrAGoals.unshift(parseInt(element[5]))
+    arrDGoals.unshift(parseInt(element[6]))
 
   }
   var sumPoints = arrPoints.reduce(function (sumPoints, i) {
     return sumPoints + i
-  })
-  var sumGames = arrGames.reduce(function (sumGames, i) {
-    return sumGames + i
   })
   var sumWin = arrWin.reduce(function (sumWin, i) {
     return sumWin + i
@@ -232,78 +294,51 @@ function allGames(gamesCountry){
   var sumAGoals = arrAGoals.reduce(function (sumAGoals, i) {
     return sumAGoals + i
   })
-  var sumDGoals = sumFGoals - sumAGoals
 
-  arrAllGames.unshift(
-    sumPoints,
-    sumGames,
-    sumWin,
-    sumDraw,
-    sumLoss,
-    sumFGoals,
-    sumAGoals,
-    sumDGoals
-  )
-  return arrAllGames
-}
+  var sumDGoals = arrDGoals.reduce(function (sumDGoals, i) {
+    return sumDGoals + i
+  })
 
-// console.log(allGames(gamesWales))
-//--------------------------------------------------------------
-
-function fillArray(country){
-  const array = []
-  array.unshift(
-    country.cells[1].innerText,
-    country.cells[2].innerText,
-    country.cells[3].innerText,
-    country.cells[4].innerText,
-    country.cells[5].innerText,
-    country.cells[6].innerText,
-    country.cells[7].innerText,
-    country.cells[8].innerText
-  )
-
-  return array
+  country.cells[1].innerText = sumPoints, 
+  country.cells[2].innerText = games.length, 
+  country.cells[3].innerText = sumWin, 
+  country.cells[4].innerText = sumDraw, 
+  country.cells[5].innerText = sumLoss, 
+  country.cells[6].innerText = sumFGoals, 
+  country.cells[7].innerText = sumAGoals, 
+  country.cells[8].innerText = sumDGoals
 
 }
 
 
-function fillScoutTable(country, games, result, fGoals, aGoals){
+function fillScoutTable(fGoals, aGoals){
+  const arrFill = []
   let dGoals = fGoals - aGoals
-  result.toLowerCase
-  if (result == "win") {
-    country.cells[3].innerHTML = 1 //win
-    country.cells[4].innerHTML = 0 //draw
-    country.cells[5].innerHTML = 0 //loss
-    country.cells[1].innerHTML = 3
-  } else if (result == "draw") {
-    country.cells[3].innerHTML = 0 //win
-    country.cells[4].innerHTML = 1 //draw
-    country.cells[5].innerHTML = 0 //loss
-    country.cells[1].innerHTML = 1
-  } else if (result == "loss") {
-    country.cells[3].innerHTML = 0 //win
-    country.cells[4].innerHTML = 0 //draw
-    country.cells[5].innerHTML = 1 //loss
-    country.cells[1].innerHTML = 0
-  }else{
-    country.cells[3].innerHTML = 0 //win
-    country.cells[4].innerHTML = 0 //draw
-    country.cells[5].innerHTML = 0 //loss
-    country.cells[1].innerHTML = 0
+  var win, draw, loss, points
+  if (fGoals > aGoals) {
+    win = 1 //win
+    draw = 0 //draw
+    loss = 0 //loss
+    points = 3
+  } else if (fGoals == aGoals) {
+    win = 0 //win
+    draw = 1 //draw
+    loss = 0 //loss
+    points = 1
+  } else{
+    win = 0 //win
+    draw = 0 //draw
+    loss = 1 //loss
+    points = 0
   }
-  country.cells[2].innerHTML = games
-  country.cells[6].innerHTML = fGoals
-  country.cells[7].innerHTML = aGoals
-  country.cells[8].innerHTML = dGoals
+  
+  arrFill.unshift(points, win, draw, loss, fGoals, aGoals, dGoals)
 
-  return fillArray(country)
+  return arrFill
 }
 
-
-//order table
+//------------------order table-----------------------
 const tables = document.querySelectorAll(".tbodyScout")
-
 for(let i = 0; i < tables.length; i++){
   var index = 1
   const table = tables[i]
@@ -315,24 +350,16 @@ for(let i = 0; i < tables.length; i++){
     var a_value = a.children[index].innerText
     var b_value = b.children[index].innerText
 
-    var comp = b_value - a_value
-    if(comp == 0){
-      index = 8
-      var a_value_draw = a.children[index].innerText
-      var b_value_draw = b.children[index].innerText
-      comp = b_value_draw - a_value_draw
-    }
+    var comp = a_value - b_value
     return comp
-
   })
   
-  arr.forEach((elem) => {
+  arr.reverse().forEach((elem) => {
     table.appendChild(elem)
   })
 }
 
-  //-------------------------------------------------------------------
-  //-----------------------------Events--------------------------------
+//-----------------------------Events--------------------------------
 
 const headTableGroup = document.querySelectorAll("thead.theadGroup")
 const tableScout = document.querySelectorAll("table.tableScout")
