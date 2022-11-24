@@ -104,10 +104,18 @@ const GroupH = createTableGroup(7)
 document.getElementById("groups").innerHTML =
   GroupA + GroupB + GroupC + GroupD + GroupE + GroupF + GroupG + GroupH
 document.querySelector("footer").innerHTML = createFooter()
+document.querySelector("header").innerHTML = crateHeader("index")
+document.querySelector("body").className = localStorage.getItem("color")
+function expiredTime() {
+  localStorage.clear()
+}
+setTimeout(expiredTime, 15 * 60 * 1000)
 
 
 // ----------------FUNÇÃO PARA PREENCHER TABELA----------------------
 //----------------------------Group A-------------------------
+
+
 const qatar = document.getElementById("qatar")
 const ecuador = document.getElementById("ecuador")
 const senegal = document.getElementById("senegal")
@@ -157,8 +165,8 @@ const costa_rica = document.getElementById("costa-rica")
 const germany = document.getElementById("germany")
 const japan = document.getElementById("japan")
 
-fillScoutTable(spain, 0, "empty", 0, 0)
-fillScoutTable(costa_rica, 0, "empty", 0, 0)
+fillScoutTable(spain, 1, "win", 7, 0)
+fillScoutTable(costa_rica, 1, "loss", 0, 7)
 fillScoutTable(germany, 1, "loss", 1, 2)
 fillScoutTable(japan, 1, "win", 2, 1)
 
@@ -168,35 +176,78 @@ const canada = document.getElementById("canada")
 const morocco = document.getElementById("morocco")
 const croatia = document.getElementById("croatia")
 
-fillScoutTable(belgium, 0, "empty", 0,0)
-fillScoutTable(canada, 0, "empty", 0, 0)
+fillScoutTable(belgium, 1, "win", 1,0)
+fillScoutTable(canada, 1, "loss", 0, 1)
 fillScoutTable(morocco, 1, "draw", 0, 0)
 fillScoutTable(croatia, 1, "draw", 0, 0)
 
-var gamesWales = [
-  fillScoutTable(wales, 1, "draw", 1, 1),
-  fillScoutTable(wales, 1, "win", 3, 0),
-  fillScoutTable(wales, 1, "loss", 2, 3),
-]
+// var gamesWales = [
+//   fillScoutTable(wales, 1, "draw", 1, 1),
+//   fillScoutTable(wales, 1, "win", 3, 0),
+//   fillScoutTable(wales, 1, "loss", 2, 3),
+// ]
 
 // console.log(gamesWales)
 
-// console.log(gamesWales[0][0])
-// console.log(gamesWales[1][0])
-// console.log(gamesWales[2][0])
+function allGames(gamesCountry){
+  const arrPoints = []
+  const arrGames = []
+  const arrWin = []
+  const arrDraw = []
+  const arrLoss = []
+  const arrFGoals = []
+  const arrAGoals = []
+  const arrDGoals = []
+  const arrAllGames = []
 
-// const soma =
-//   parseInt(gamesWales[0][0]) +
-//   parseInt(gamesWales[1][0]) +
-//   parseInt(gamesWales[2][0])
+  for (let i = 0; i < gamesCountry.length; i++) {
+    const element = gamesCountry[i]
+    arrPoints.unshift(parseInt(element[0]))
+    arrGames.unshift(parseInt(element[1]))
+    arrWin.unshift(parseInt(element[2]))
+    arrDraw.unshift(parseInt(element[3]))
+    arrLoss.unshift(parseInt(element[4]))
+    arrFGoals.unshift(parseInt(element[5]))
+    arrAGoals.unshift(parseInt(element[7]))
 
-// console.log(soma+" pontos")
+  }
+  var sumPoints = arrPoints.reduce(function (sumPoints, i) {
+    return sumPoints + i
+  })
+  var sumGames = arrGames.reduce(function (sumGames, i) {
+    return sumGames + i
+  })
+  var sumWin = arrWin.reduce(function (sumWin, i) {
+    return sumWin + i
+  })
+  var sumDraw = arrDraw.reduce(function (sumDraw, i) {
+    return sumDraw + i
+  })
+  var sumLoss = arrLoss.reduce(function (sumLoss, i) {
+    return sumLoss + i
+  })
+  var sumFGoals = arrFGoals.reduce(function (sumFGoals, i) {
+    return sumFGoals + i
+  })
+  var sumAGoals = arrAGoals.reduce(function (sumAGoals, i) {
+    return sumAGoals + i
+  })
+  var sumDGoals = sumFGoals - sumAGoals
 
+  arrAllGames.unshift(
+    sumPoints,
+    sumGames,
+    sumWin,
+    sumDraw,
+    sumLoss,
+    sumFGoals,
+    sumAGoals,
+    sumDGoals
+  )
+  return arrAllGames
+}
 
-  
-
-
-
+// console.log(allGames(gamesWales))
 //--------------------------------------------------------------
 
 function fillArray(country){
@@ -254,7 +305,6 @@ function fillScoutTable(country, games, result, fGoals, aGoals){
 const tables = document.querySelectorAll(".tbodyScout")
 
 for(let i = 0; i < tables.length; i++){
-  const asc = false // ordem: ascendente ou descendente
   var index = 1
   const table = tables[i]
   const arr = Array.from(
@@ -262,13 +312,18 @@ for(let i = 0; i < tables.length; i++){
   )
 
   arr.sort((a, b) => {
-    var a_val = a.children[index].innerText
-    var b_val = b.children[index].innerText
-    if (a_val == b_val){
-      a_val = a.lastElementChild.innerText
-      b_val = b.lastElementChild.innerText
+    var a_value = a.children[index].innerText
+    var b_value = b.children[index].innerText
+
+    var comp = b_value - a_value
+    if(comp == 0){
+      index = 8
+      var a_value_draw = a.children[index].innerText
+      var b_value_draw = b.children[index].innerText
+      comp = b_value_draw - a_value_draw
     }
-    return asc ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
+    return comp
+
   })
   
   arr.forEach((elem) => {
@@ -276,12 +331,8 @@ for(let i = 0; i < tables.length; i++){
   })
 }
 
-
   //-------------------------------------------------------------------
-  // Events
-
-document.querySelector("header").innerHTML = crateHeader("index")
-document.querySelector("body").className = localStorage.getItem("color")
+  //-----------------------------Events--------------------------------
 
 const headTableGroup = document.querySelectorAll("thead.theadGroup")
 const tableScout = document.querySelectorAll("table.tableScout")

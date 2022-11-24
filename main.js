@@ -260,6 +260,18 @@ germanyScore[0].innerHTML = 1
 
 const japanScore = document.getElementsByClassName("scoreBoard-japan")
 japanScore[0].innerHTML = 2
+
+const spainScore = document.getElementsByClassName("scoreBoard-spain")
+spainScore[0].innerHTML = 7
+
+const costa_ricaScore = document.getElementsByClassName("scoreBoard-costa-rica")
+costa_ricaScore[0].innerHTML = 0
+
+const belgiumScore = document.getElementsByClassName("scoreBoard-belgium")
+belgiumScore[0].innerHTML = 1
+
+const canadaScore = document.getElementsByClassName("scoreBoard-canada")
+canadaScore[0].innerHTML = 0
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")
