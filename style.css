@@ -135,6 +135,7 @@ nav {
 .ul-footer{
   list-style: none;
   font-style: italic;
+  text-align: center;
 }
 
 .ul-footer:first-child{
