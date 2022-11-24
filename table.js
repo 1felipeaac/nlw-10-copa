@@ -106,10 +106,6 @@ document.getElementById("groups").innerHTML =
 document.querySelector("footer").innerHTML = createFooter()
 document.querySelector("header").innerHTML = crateHeader("index")
 document.querySelector("body").className = localStorage.getItem("color")
-function expiredTime() {
-  localStorage.clear()
-}
-setTimeout(expiredTime, 15 * 60 * 1000)
 
 
 // ----------------FUNÇÃO PARA PREENCHER TABELA----------------------
@@ -337,6 +333,7 @@ function fillScoutTable(fGoals, aGoals){
   return arrFill
 }
 
+
 //------------------order table-----------------------
 const tables = document.querySelectorAll(".tbodyScout")
 for(let i = 0; i < tables.length; i++){
@@ -346,11 +343,17 @@ for(let i = 0; i < tables.length; i++){
     table.querySelectorAll("tbody tr")
   )
 
-  arr.sort((a, b) => {
+  arr.sort(function (a, b){
     var a_value = a.children[index].innerText
     var b_value = b.children[index].innerText
-
     var comp = a_value - b_value
+
+    if(comp == 0){
+      a_value = a.lastElementChild.innerText
+      b_value = b.lastElementChild.innerText
+
+      comp = a_value - b_value
+    }
     return comp
   })
   
@@ -391,6 +394,6 @@ for (let index = 0; index < headTableGroup.length; index++) {
     elementTableGroup.style.display = "table"
     elementTableScout.style.display = "none"
   }
-}
 
+}
 

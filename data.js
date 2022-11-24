@@ -492,5 +492,4 @@ export function getTheme() {
   document.querySelector("body").addEventListener("change", function () {
     localStorage.setItem("color", document.querySelector("body").className)
   })
-  
 }
