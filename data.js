@@ -455,7 +455,7 @@ export function crateHeader(local) {
       </div>
     </div>
     <img id="trophy" src="./assets/logo-world-cup.svg" alt="Taça da Copa do Mundo">
-    <nav><a href="./${local}.html"><button type="submit">ir para ${page}</button></a><div id="timer"></div></nav>
+    <nav><a href="./${local}.html"><button class="link-button" type="submit">ir para ${page}</button></a><div id="timer"></div></nav>
   `
 }
 

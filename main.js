@@ -161,6 +161,7 @@ document.querySelector("header").innerHTML = crateHeader("groups")
 document.querySelector("footer").innerHTML = createFooter()
 
 setTheme()
+
 //----------------------- SAVE CLASSNAME ----------------------
 var field = document.querySelector("body")
 // Se tivermos um valor salvo automaticamente
@@ -202,6 +203,7 @@ var limit = setInterval(function () {
 //----------------------------SCOREBOARD---------------------------
 const qatarScore = document.getElementsByClassName("scoreBoard-qatar")
 qatarScore[0].innerHTML = 0
+qatarScore[1].innerHTML = 1
 
 const ecuadorScore = document.getElementsByClassName("scoreBoard-ecuador")
 ecuadorScore[0].innerHTML = 2
@@ -211,9 +213,11 @@ englanScore[0].innerHTML = 6
 
 const iranScore = document.getElementsByClassName("scoreBoard-iran")
 iranScore[0].innerHTML = 2
+iranScore[1].innerHTML = 2
 
 const senegalScore = document.getElementsByClassName("scoreBoard-senegal")
 senegalScore[0].innerHTML = 0
+senegalScore[1].innerHTML = 3
 
 const netherlandsScore = document.getElementsByClassName("scoreBoard-netherlands")
 netherlandsScore[0].innerHTML = 2
@@ -223,6 +227,7 @@ united_statesScore[0].innerHTML = 1
 
 const walesScore = document.getElementsByClassName("scoreBoard-wales")
 walesScore[0].innerHTML = 1
+walesScore[1].innerHTML = 0
 
 const argentinaScore = document.getElementsByClassName("scoreBoard-argentina")
 argentinaScore[0].innerHTML = 1
@@ -283,6 +288,18 @@ south_koreaScore[0].innerHTML = 0
 
 const uruguayScore = document.getElementsByClassName("scoreBoard-uruguay")
 uruguayScore[0].innerHTML = 0
+
+const ghanaScore = document.getElementsByClassName("scoreBoard-ghana")
+ghanaScore[0].innerHTML = 2
+
+const portugalScore = document.getElementsByClassName("scoreBoard-portugal")
+portugalScore[0].innerHTML = 3
+
+const brazilScore = document.getElementsByClassName("scoreBoard-brazil")
+brazilScore[0].innerHTML = 2
+
+const serbiaScore = document.getElementsByClassName("scoreBoard-serbia")
+serbiaScore[0].innerHTML = 0
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")

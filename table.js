@@ -108,6 +108,7 @@ document.querySelector("header").innerHTML = crateHeader("index")
 document.querySelector("body").className = localStorage.getItem("color")
 
 
+
 // ----------------FUNÇÃO PARA PREENCHER TABELA----------------------
 //----------------------------Group A-------------------------
 
@@ -116,13 +117,13 @@ const ecuador = document.getElementById("ecuador")
 const senegal = document.getElementById("senegal")
 const netherlands = document.getElementById("netherlands")
 
-const qatarGames = [fillScoutTable(0, 2)]
+const qatarGames = [fillScoutTable(0, 2), fillScoutTable(1,3)]
 allGames(qatar, qatarGames)
 
 const ecuadorGames= [fillScoutTable(2,0)]
 allGames(ecuador, ecuadorGames)
 
-const senagalGames = [fillScoutTable(0,2)]
+const senagalGames = [fillScoutTable(0,2), fillScoutTable(3,1)]
 allGames(senegal, senagalGames)
 
 const netherlandsGames = [fillScoutTable(2,0)]
@@ -137,15 +138,14 @@ const wales = document.getElementById("wales")
 const englandGames = [fillScoutTable(6,2)]
 allGames(england, englandGames)
 
-const iranGames = [fillScoutTable(2,6)]
+const iranGames = [fillScoutTable(2,6), fillScoutTable(2,0)]
 allGames(iran, iranGames)
 
 const united_statesGames = [fillScoutTable(1,1)]
 allGames(united_states, united_statesGames)
 
-const walesGames = [fillScoutTable(1, 1)]
+const walesGames = [fillScoutTable(1, 1), fillScoutTable(0,2)]
 allGames(wales, walesGames)
-
 //---------------------------Group C------------------------------
 const argentina = document.getElementById("argentina")
 const saudi_arabia = document.getElementById("saudi-arabia")
@@ -230,9 +230,11 @@ allGames(switzerland, switzerlandGames)
 const cameroonGames = [fillScoutTable(0,1)]
 allGames(cameroon, cameroonGames)
 
-const brazilGames = [fillScoutTable(0, 0)]
+const brazilGames = [fillScoutTable(2, 0)]
+allGames(brazil, brazilGames)
 
-const serbiaGames = [fillScoutTable(0, 0)]
+const serbiaGames = [fillScoutTable(0, 2)]
+allGames(serbia, serbiaGames)
 
 //---------------------------Group G------------------------------
 const south_korea = document.getElementById("south-korea")
