@@ -43,4 +43,5 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Projeto inspirado no evento NLW-10-Copa by Rocketseat :wave: [Participe da comunidade!](https://discord.gg/rocketseat)
+Continuado por: Felipe Coelho (felipeaacoelho@gmail.com)
