@@ -1,4 +1,5 @@
 import { arrayWorldCup, crateHeader, createFooter } from "./data.js"
+// import { qatarResult } from "./main.js"
 
 //Functions constructors
 function createLine(country) {
@@ -245,14 +246,14 @@ const portugal = document.getElementById("portugal")
 const south_koreaGames = [fillScoutTable(0,0)]
 allGames(south_korea, south_koreaGames)
 
-const ghanaGames = [fillScoutTable(0,0)]
-// allGames(ghana, ghanaGames)
+const ghanaGames = [fillScoutTable(2,3)]
+allGames(ghana, ghanaGames)
 
 const uruguayGames = [fillScoutTable(0,0)]
 allGames(uruguay, uruguayGames)
 
-const portugalGames = [fillScoutTable(0,0)]
-// allGames(portugal, portugalGames)
+const portugalGames = [fillScoutTable(3,2)]
+allGames(portugal, portugalGames)
 
 function allGames(country, games){
   const arrPoints = []
