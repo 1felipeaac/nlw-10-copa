@@ -210,6 +210,12 @@ td {
   width: 30px;
 }
 
+.tbodyScout tr:nth-child(n+1):nth-child(-n+2){
+  background-color: var(--card_color_primary);
+  font-weight: bold;
+  color: var(--card_bg_color);
+}
+
 .tableScout td {
   height: 60px;
   width: 30px;
