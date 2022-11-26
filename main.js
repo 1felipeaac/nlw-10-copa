@@ -242,6 +242,7 @@ saudi_arabiaScore[1].innerHTML = 0
 
 const denmarkScore = document.getElementsByClassName("scoreBoard-denmark")
 denmarkScore[0].innerHTML = 0
+denmarkScore[1].innerHTML = 1
 
 const tunisiaScore = document.getElementsByClassName("scoreBoard-tunisia")
 tunisiaScore[0].innerHTML = 0
@@ -256,6 +257,7 @@ polandScore[1].innerHTML = 2
 
 const franceScore = document.getElementsByClassName("scoreBoard-france")
 franceScore[0].innerHTML = 4
+franceScore[1].innerHTML = 2
 
 const australiaScore = document.getElementsByClassName("scoreBoard-australia")
 australiaScore[0].innerHTML = 1
