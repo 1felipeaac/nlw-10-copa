@@ -121,13 +121,13 @@ const netherlands = document.getElementById("netherlands")
 const qatarGames = [fillScoutTable(0, 2), fillScoutTable(1,3)]
 allGames(qatar, qatarGames)
 
-const ecuadorGames= [fillScoutTable(2,0)]
+const ecuadorGames= [fillScoutTable(2,0),fillScoutTable(1,1)]
 allGames(ecuador, ecuadorGames)
 
 const senagalGames = [fillScoutTable(0,2), fillScoutTable(3,1)]
 allGames(senegal, senagalGames)
 
-const netherlandsGames = [fillScoutTable(2,0)]
+const netherlandsGames = [fillScoutTable(2,0),fillScoutTable(1,1)]
 allGames(netherlands, netherlandsGames)
 
 //----------------------------Group B-------------------------
@@ -136,13 +136,13 @@ const iran = document.getElementById("iran")
 const united_states = document.getElementById("united-states")
 const wales = document.getElementById("wales")
 
-const englandGames = [fillScoutTable(6,2)]
+const englandGames = [fillScoutTable(6,2), fillScoutTable(0,0)]
 allGames(england, englandGames)
 
 const iranGames = [fillScoutTable(2,6), fillScoutTable(2,0)]
 allGames(iran, iranGames)
 
-const united_statesGames = [fillScoutTable(1,1)]
+const united_statesGames = [fillScoutTable(1,1), fillScoutTable(0,0)]
 allGames(united_states, united_statesGames)
 
 const walesGames = [fillScoutTable(1, 1), fillScoutTable(0,2)]
@@ -156,13 +156,13 @@ const poland = document.getElementById("poland")
 const argentinaGames = [fillScoutTable(1, 2)]
 allGames(argentina, argentinaGames)
 
-const saudi_arabiaGames = [fillScoutTable(2, 1)]
+const saudi_arabiaGames = [fillScoutTable(2, 1), fillScoutTable(0,2)]
 allGames(saudi_arabia, saudi_arabiaGames)
 
 const mexicoGames = [fillScoutTable(0, 0)]
 allGames(mexico, mexicoGames)
 
-const polandGames = [fillScoutTable(0, 0)]
+const polandGames = [fillScoutTable(0, 0), fillScoutTable(2,0)]
 allGames(poland, polandGames)
 
 //---------------------------Group D------------------------------
