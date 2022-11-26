@@ -174,13 +174,13 @@ const tunisia = document.getElementById("tunisia")
 const franceGames = [fillScoutTable(4, 1)]
 allGames(france, franceGames)
 
-const australiaGames = [fillScoutTable(1, 4)]
+const australiaGames = [fillScoutTable(1, 4), fillScoutTable(1,0)]
 allGames(australia, australiaGames)
 
 const denmarkGames = [fillScoutTable(0, 0)]
 allGames(denmark, denmarkGames)
 
-const tunisiaGames = [fillScoutTable(0, 0)]
+const tunisiaGames = [fillScoutTable(0, 0), fillScoutTable(0,1)]
 allGames(tunisia, tunisiaGames)
 
 //---------------------------Group E------------------------------
