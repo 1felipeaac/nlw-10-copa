@@ -235,6 +235,7 @@ walesScore[1].innerHTML = 0
 
 const argentinaScore = document.getElementsByClassName("scoreBoard-argentina")
 argentinaScore[0].innerHTML = 1
+argentinaScore[1].innerHTML = 2
 
 const saudi_arabiaScore = document.getElementsByClassName("scoreBoard-saudi-arabia")
 saudi_arabiaScore[0].innerHTML = 2
@@ -250,6 +251,7 @@ tunisiaScore[1].innerHTML = 0
 
 const mexicoScore = document.getElementsByClassName("scoreBoard-mexico")
 mexicoScore[0].innerHTML = 0
+mexicoScore[1].innerHTML = 0
 
 const polandScore = document.getElementsByClassName("scoreBoard-poland")
 polandScore[0].innerHTML = 0
