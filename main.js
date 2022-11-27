@@ -271,6 +271,7 @@ moroccoScore[1].innerHTML = 2
 
 const croatiaScore = document.getElementsByClassName("scoreBoard-croatia")
 croatiaScore[0].innerHTML = 0
+croatiaScore[1].innerHTML = 3
 
 const germanyScore = document.getElementsByClassName("scoreBoard-germany")
 germanyScore[0].innerHTML = 1
@@ -292,6 +293,7 @@ belgiumScore[1].innerHTML = 0
 
 const canadaScore = document.getElementsByClassName("scoreBoard-canada")
 canadaScore[0].innerHTML = 0
+canadaScore[1].innerHTML = 1
 
 const switzerlandScore = document.getElementsByClassName("scoreBoard-switzerland")
 switzerlandScore[0].innerHTML = 1
