@@ -192,13 +192,13 @@ const japan = document.getElementById("japan")
 const spainGames = [fillScoutTable(7, 0)]
 allGames(spain, spainGames)
 
-const costa_ricaGames = [fillScoutTable(0, 7)]
+const costa_ricaGames = [fillScoutTable(0, 7), fillScoutTable(1, 0)]
 allGames(costa_rica, costa_ricaGames)
 
 const germanyGames = [fillScoutTable(1, 2)]
 allGames(germany, germanyGames)
 
-const japanGames = [fillScoutTable(2, 1)]
+const japanGames = [fillScoutTable(2, 1), fillScoutTable(0, 1)]
 allGames(japan, japanGames)
 
 //---------------------------Group F------------------------------
@@ -354,7 +354,6 @@ for(let i = 0; i < tables.length; i++){
     if(comp == 0){
       a_value = a.lastElementChild.innerText
       b_value = b.lastElementChild.innerText
-
       comp = a_value - b_value
     }
     return comp

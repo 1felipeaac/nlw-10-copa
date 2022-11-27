@@ -276,12 +276,14 @@ germanyScore[0].innerHTML = 1
 
 const japanScore = document.getElementsByClassName("scoreBoard-japan")
 japanScore[0].innerHTML = 2
+japanScore[1].innerHTML = 0
 
 const spainScore = document.getElementsByClassName("scoreBoard-spain")
 spainScore[0].innerHTML = 7
 
 const costa_ricaScore = document.getElementsByClassName("scoreBoard-costa-rica")
 costa_ricaScore[0].innerHTML = 0
+costa_ricaScore[1].innerHTML = 1
 
 const belgiumScore = document.getElementsByClassName("scoreBoard-belgium")
 belgiumScore[0].innerHTML = 1
