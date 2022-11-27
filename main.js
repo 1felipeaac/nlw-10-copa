@@ -267,6 +267,7 @@ australiaScore[1].innerHTML = 1
 
 const moroccoScore = document.getElementsByClassName("scoreBoard-morocco")
 moroccoScore[0].innerHTML = 0
+moroccoScore[1].innerHTML = 2
 
 const croatiaScore = document.getElementsByClassName("scoreBoard-croatia")
 croatiaScore[0].innerHTML = 0
@@ -287,6 +288,7 @@ costa_ricaScore[1].innerHTML = 1
 
 const belgiumScore = document.getElementsByClassName("scoreBoard-belgium")
 belgiumScore[0].innerHTML = 1
+belgiumScore[1].innerHTML = 0
 
 const canadaScore = document.getElementsByClassName("scoreBoard-canada")
 canadaScore[0].innerHTML = 0

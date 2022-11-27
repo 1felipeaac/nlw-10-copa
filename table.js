@@ -207,13 +207,13 @@ const canada = document.getElementById("canada")
 const morocco = document.getElementById("morocco")
 const croatia = document.getElementById("croatia")
 
-const belgiumGames = [fillScoutTable(1,0)]
+const belgiumGames = [fillScoutTable(1,0), fillScoutTable(0,2)]
 allGames(belgium, belgiumGames)
 
 const canadaGames = [fillScoutTable(0, 1)]
 allGames(canada, canadaGames)
 
-const moroccoGames = [fillScoutTable(0, 0)]
+const moroccoGames = [fillScoutTable(0, 0), fillScoutTable(2,0)]
 allGames(morocco, moroccoGames)
 
 const croatiaGames = [fillScoutTable(0, 0)]
