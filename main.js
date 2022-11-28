@@ -271,10 +271,11 @@ moroccoScore[1].innerHTML = 2
 
 const croatiaScore = document.getElementsByClassName("scoreBoard-croatia")
 croatiaScore[0].innerHTML = 0
-croatiaScore[1].innerHTML = 3
+croatiaScore[1].innerHTML = 4
 
 const germanyScore = document.getElementsByClassName("scoreBoard-germany")
 germanyScore[0].innerHTML = 1
+germanyScore[1].innerHTML = 1
 
 const japanScore = document.getElementsByClassName("scoreBoard-japan")
 japanScore[0].innerHTML = 2
@@ -282,6 +283,7 @@ japanScore[1].innerHTML = 0
 
 const spainScore = document.getElementsByClassName("scoreBoard-spain")
 spainScore[0].innerHTML = 7
+spainScore[1].innerHTML = 1
 
 const costa_ricaScore = document.getElementsByClassName("scoreBoard-costa-rica")
 costa_ricaScore[0].innerHTML = 0

@@ -189,13 +189,13 @@ const costa_rica = document.getElementById("costa-rica")
 const germany = document.getElementById("germany")
 const japan = document.getElementById("japan")
 
-const spainGames = [fillScoutTable(7, 0)]
+const spainGames = [fillScoutTable(7, 0), fillScoutTable(1,1)]
 allGames(spain, spainGames)
 
 const costa_ricaGames = [fillScoutTable(0, 7), fillScoutTable(1, 0)]
 allGames(costa_rica, costa_ricaGames)
 
-const germanyGames = [fillScoutTable(1, 2)]
+const germanyGames = [fillScoutTable(1, 2), fillScoutTable(1,1)]
 allGames(germany, germanyGames)
 
 const japanGames = [fillScoutTable(2, 1), fillScoutTable(0, 1)]
@@ -216,7 +216,7 @@ allGames(canada, canadaGames)
 const moroccoGames = [fillScoutTable(0, 0), fillScoutTable(2,0)]
 allGames(morocco, moroccoGames)
 
-const croatiaGames = [fillScoutTable(0, 0), fillScoutTable(3,1)]
+const croatiaGames = [fillScoutTable(0, 0), fillScoutTable(4,1)]
 allGames(croatia, croatiaGames)
 
 //---------------------------Group G------------------------------
