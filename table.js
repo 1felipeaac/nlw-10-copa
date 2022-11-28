@@ -228,13 +228,13 @@ const serbia = document.getElementById("serbia")
 const switzerlandGames = [fillScoutTable(1,0)]
 allGames(switzerland, switzerlandGames)
 
-const cameroonGames = [fillScoutTable(0,1)]
+const cameroonGames = [fillScoutTable(0,1), fillScoutTable(3,3)]
 allGames(cameroon, cameroonGames)
 
 const brazilGames = [fillScoutTable(2, 0)]
 allGames(brazil, brazilGames)
 
-const serbiaGames = [fillScoutTable(0, 2)]
+const serbiaGames = [fillScoutTable(0, 2), fillScoutTable(3,3)]
 allGames(serbia, serbiaGames)
 
 //---------------------------Group G------------------------------

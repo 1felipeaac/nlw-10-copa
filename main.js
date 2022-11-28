@@ -302,6 +302,7 @@ switzerlandScore[0].innerHTML = 1
 
 const cameroonScore = document.getElementsByClassName("scoreBoard-cameroon")
 cameroonScore[0].innerHTML = 0
+cameroonScore[1].innerHTML = 3
 
 const south_koreaScore = document.getElementsByClassName("scoreBoard-south-korea")
 south_koreaScore[0].innerHTML = 0
@@ -320,6 +321,7 @@ brazilScore[0].innerHTML = 2
 
 const serbiaScore = document.getElementsByClassName("scoreBoard-serbia")
 serbiaScore[0].innerHTML = 0
+serbiaScore[1].innerHTML = 3
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")
