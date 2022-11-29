@@ -225,13 +225,13 @@ const cameroon = document.getElementById("cameroon")
 const brazil = document.getElementById("brazil")
 const serbia = document.getElementById("serbia")
 
-const switzerlandGames = [fillScoutTable(1,0)]
+const switzerlandGames = [fillScoutTable(1,0), fillScoutTable(0,1)]
 allGames(switzerland, switzerlandGames)
 
 const cameroonGames = [fillScoutTable(0,1), fillScoutTable(3,3)]
 allGames(cameroon, cameroonGames)
 
-const brazilGames = [fillScoutTable(2, 0)]
+const brazilGames = [fillScoutTable(2, 0), fillScoutTable(1,0)]
 allGames(brazil, brazilGames)
 
 const serbiaGames = [fillScoutTable(0, 2), fillScoutTable(3,3)]
@@ -243,16 +243,16 @@ const ghana = document.getElementById("ghana")
 const uruguay = document.getElementById("uruguay")
 const portugal = document.getElementById("portugal")
 
-const south_koreaGames = [fillScoutTable(0,0)]
+const south_koreaGames = [fillScoutTable(0,0),fillScoutTable(2,3)]
 allGames(south_korea, south_koreaGames)
 
-const ghanaGames = [fillScoutTable(2,3)]
+const ghanaGames = [fillScoutTable(2,3), fillScoutTable(3,2)]
 allGames(ghana, ghanaGames)
 
-const uruguayGames = [fillScoutTable(0,0)]
+const uruguayGames = [fillScoutTable(0,0), fillScoutTable(0,2)]
 allGames(uruguay, uruguayGames)
 
-const portugalGames = [fillScoutTable(3,2)]
+const portugalGames = [fillScoutTable(3,2), fillScoutTable(2,0)]
 allGames(portugal, portugalGames)
 
 function allGames(country, games){

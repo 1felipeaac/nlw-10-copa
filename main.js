@@ -5,9 +5,6 @@ import {
   createFooter,
 } from "./data.js"
 
-// const italia = new Players("italia");
-
-// console.log(italia.getCountry())
 
 function createGame(player1, hour, player2, group) {
   return `
@@ -299,6 +296,7 @@ canadaScore[1].innerHTML = 1
 
 const switzerlandScore = document.getElementsByClassName("scoreBoard-switzerland")
 switzerlandScore[0].innerHTML = 1
+switzerlandScore[1].innerHTML = 0
 
 const cameroonScore = document.getElementsByClassName("scoreBoard-cameroon")
 cameroonScore[0].innerHTML = 0
@@ -306,18 +304,23 @@ cameroonScore[1].innerHTML = 3
 
 const south_koreaScore = document.getElementsByClassName("scoreBoard-south-korea")
 south_koreaScore[0].innerHTML = 0
+south_koreaScore[1].innerHTML = 2
 
 const uruguayScore = document.getElementsByClassName("scoreBoard-uruguay")
 uruguayScore[0].innerHTML = 0
+uruguayScore[1].innerHTML = 0
 
 const ghanaScore = document.getElementsByClassName("scoreBoard-ghana")
 ghanaScore[0].innerHTML = 2
+ghanaScore[1].innerHTML = 3
 
 const portugalScore = document.getElementsByClassName("scoreBoard-portugal")
 portugalScore[0].innerHTML = 3
+portugalScore[1].innerHTML = 2
 
 const brazilScore = document.getElementsByClassName("scoreBoard-brazil")
 brazilScore[0].innerHTML = 2
+brazilScore[1].innerHTML = 1
 
 const serbiaScore = document.getElementsByClassName("scoreBoard-serbia")
 serbiaScore[0].innerHTML = 0
