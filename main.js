@@ -199,130 +199,150 @@ var limit = setInterval(function () {
 
 //----------------------------SCOREBOARD---------------------------
 const qatarScore = document.getElementsByClassName("scoreBoard-qatar")
-qatarScore[0].innerHTML = 0
-qatarScore[1].innerHTML = 1
-
 const ecuadorScore = document.getElementsByClassName("scoreBoard-ecuador")
+const englanScore = document.getElementsByClassName("scoreBoard-england")
+const iranScore = document.getElementsByClassName("scoreBoard-iran")
+const senegalScore = document.getElementsByClassName("scoreBoard-senegal")
+const netherlandsScore = document.getElementsByClassName(
+  "scoreBoard-netherlands"
+)
+const united_statesScore = document.getElementsByClassName(
+  "scoreBoard-united-states"
+)
+const walesScore = document.getElementsByClassName("scoreBoard-wales")
+const argentinaScore = document.getElementsByClassName("scoreBoard-argentina")
+const saudi_arabiaScore = document.getElementsByClassName(
+  "scoreBoard-saudi-arabia"
+)
+const denmarkScore = document.getElementsByClassName("scoreBoard-denmark")
+const tunisiaScore = document.getElementsByClassName("scoreBoard-tunisia")
+const mexicoScore = document.getElementsByClassName("scoreBoard-mexico")
+const polandScore = document.getElementsByClassName("scoreBoard-poland")
+const franceScore = document.getElementsByClassName("scoreBoard-france")
+const australiaScore = document.getElementsByClassName("scoreBoard-australia")
+const moroccoScore = document.getElementsByClassName("scoreBoard-morocco")
+const croatiaScore = document.getElementsByClassName("scoreBoard-croatia")
+const germanyScore = document.getElementsByClassName("scoreBoard-germany")
+const spainScore = document.getElementsByClassName("scoreBoard-spain")
+const japanScore = document.getElementsByClassName("scoreBoard-japan")
+const costa_ricaScore = document.getElementsByClassName("scoreBoard-costa-rica")
+const belgiumScore = document.getElementsByClassName("scoreBoard-belgium")
+const canadaScore = document.getElementsByClassName("scoreBoard-canada")
+const brazilScore = document.getElementsByClassName("scoreBoard-brazil")
+const switzerlandScore = document.getElementsByClassName(
+  "scoreBoard-switzerland"
+)
+const cameroonScore = document.getElementsByClassName("scoreBoard-cameroon")
+const south_koreaScore = document.getElementsByClassName(
+  "scoreBoard-south-korea"
+)
+const uruguayScore = document.getElementsByClassName("scoreBoard-uruguay")
+const ghanaScore = document.getElementsByClassName("scoreBoard-ghana")
+const portugalScore = document.getElementsByClassName("scoreBoard-portugal")
+const serbiaScore = document.getElementsByClassName("scoreBoard-serbia")
+
+qatarScore[0].innerHTML = 0 
 ecuadorScore[0].innerHTML = 2
+
+senegalScore[0].innerHTML = 0
+netherlandsScore[0].innerHTML = 2
+
+qatarScore[1].innerHTML = 1
+senegalScore[1].innerHTML = 3
+
+netherlandsScore[1].innerHTML = 1
 ecuadorScore[1].innerHTML = 1
 
-const englanScore = document.getElementsByClassName("scoreBoard-england")
+qatarScore[2].innerHTML = 0
+netherlandsScore[2].innerHTML = 2
+
+senegalScore[2].innerHTML = 2
+ecuadorScore[2].innerHTML = 1
+//------------------------------------------------------------------
+
 englanScore[0].innerHTML = 6
 englanScore[1].innerHTML = 0
 
-const iranScore = document.getElementsByClassName("scoreBoard-iran")
+
 iranScore[0].innerHTML = 2
 iranScore[1].innerHTML = 2
 
-const senegalScore = document.getElementsByClassName("scoreBoard-senegal")
-senegalScore[0].innerHTML = 0
-senegalScore[1].innerHTML = 3
-
-const netherlandsScore = document.getElementsByClassName("scoreBoard-netherlands")
-netherlandsScore[0].innerHTML = 2
-netherlandsScore[1].innerHTML = 1
-
-const united_statesScore = document.getElementsByClassName("scoreBoard-united-states")
 united_statesScore[0].innerHTML = 1
 united_statesScore[1].innerHTML = 0
 
-const walesScore = document.getElementsByClassName("scoreBoard-wales")
+
 walesScore[0].innerHTML = 1
 walesScore[1].innerHTML = 0
 
-const argentinaScore = document.getElementsByClassName("scoreBoard-argentina")
 argentinaScore[0].innerHTML = 1
 argentinaScore[1].innerHTML = 2
 
-const saudi_arabiaScore = document.getElementsByClassName("scoreBoard-saudi-arabia")
 saudi_arabiaScore[0].innerHTML = 2
 saudi_arabiaScore[1].innerHTML = 0
 
-const denmarkScore = document.getElementsByClassName("scoreBoard-denmark")
 denmarkScore[0].innerHTML = 0
 denmarkScore[1].innerHTML = 1
 
-const tunisiaScore = document.getElementsByClassName("scoreBoard-tunisia")
 tunisiaScore[0].innerHTML = 0
 tunisiaScore[1].innerHTML = 0
 
-const mexicoScore = document.getElementsByClassName("scoreBoard-mexico")
 mexicoScore[0].innerHTML = 0
 mexicoScore[1].innerHTML = 0
 
-const polandScore = document.getElementsByClassName("scoreBoard-poland")
 polandScore[0].innerHTML = 0
 polandScore[1].innerHTML = 2
 
-const franceScore = document.getElementsByClassName("scoreBoard-france")
 franceScore[0].innerHTML = 4
 franceScore[1].innerHTML = 2
 
-const australiaScore = document.getElementsByClassName("scoreBoard-australia")
 australiaScore[0].innerHTML = 1
 australiaScore[1].innerHTML = 1
 
-const moroccoScore = document.getElementsByClassName("scoreBoard-morocco")
 moroccoScore[0].innerHTML = 0
 moroccoScore[1].innerHTML = 2
 
-const croatiaScore = document.getElementsByClassName("scoreBoard-croatia")
 croatiaScore[0].innerHTML = 0
 croatiaScore[1].innerHTML = 4
 
-const germanyScore = document.getElementsByClassName("scoreBoard-germany")
 germanyScore[0].innerHTML = 1
 germanyScore[1].innerHTML = 1
 
-const japanScore = document.getElementsByClassName("scoreBoard-japan")
 japanScore[0].innerHTML = 2
 japanScore[1].innerHTML = 0
 
-const spainScore = document.getElementsByClassName("scoreBoard-spain")
 spainScore[0].innerHTML = 7
 spainScore[1].innerHTML = 1
 
-const costa_ricaScore = document.getElementsByClassName("scoreBoard-costa-rica")
 costa_ricaScore[0].innerHTML = 0
 costa_ricaScore[1].innerHTML = 1
 
-const belgiumScore = document.getElementsByClassName("scoreBoard-belgium")
 belgiumScore[0].innerHTML = 1
 belgiumScore[1].innerHTML = 0
 
-const canadaScore = document.getElementsByClassName("scoreBoard-canada")
 canadaScore[0].innerHTML = 0
 canadaScore[1].innerHTML = 1
 
-const switzerlandScore = document.getElementsByClassName("scoreBoard-switzerland")
 switzerlandScore[0].innerHTML = 1
 switzerlandScore[1].innerHTML = 0
 
-const cameroonScore = document.getElementsByClassName("scoreBoard-cameroon")
 cameroonScore[0].innerHTML = 0
 cameroonScore[1].innerHTML = 3
 
-const south_koreaScore = document.getElementsByClassName("scoreBoard-south-korea")
 south_koreaScore[0].innerHTML = 0
 south_koreaScore[1].innerHTML = 2
 
-const uruguayScore = document.getElementsByClassName("scoreBoard-uruguay")
 uruguayScore[0].innerHTML = 0
 uruguayScore[1].innerHTML = 0
 
-const ghanaScore = document.getElementsByClassName("scoreBoard-ghana")
 ghanaScore[0].innerHTML = 2
 ghanaScore[1].innerHTML = 3
 
-const portugalScore = document.getElementsByClassName("scoreBoard-portugal")
 portugalScore[0].innerHTML = 3
 portugalScore[1].innerHTML = 2
 
-const brazilScore = document.getElementsByClassName("scoreBoard-brazil")
 brazilScore[0].innerHTML = 2
 brazilScore[1].innerHTML = 1
 
-const serbiaScore = document.getElementsByClassName("scoreBoard-serbia")
 serbiaScore[0].innerHTML = 0
 serbiaScore[1].innerHTML = 3
 //------------------------------EVENTS-----------------------------

@@ -118,16 +118,16 @@ const ecuador = document.getElementById("ecuador")
 const senegal = document.getElementById("senegal")
 const netherlands = document.getElementById("netherlands")
 
-const qatarGames = [fillScoutTable(0, 2), fillScoutTable(1,3)]
+const qatarGames = [fillScoutTable(0, 2), fillScoutTable(1,3), fillScoutTable(0,2)]
 allGames(qatar, qatarGames)
 
-const ecuadorGames= [fillScoutTable(2,0),fillScoutTable(1,1)]
+const ecuadorGames= [fillScoutTable(2,0),fillScoutTable(1,1), fillScoutTable(1,2)]
 allGames(ecuador, ecuadorGames)
 
-const senagalGames = [fillScoutTable(0,2), fillScoutTable(3,1)]
+const senagalGames = [fillScoutTable(0,2), fillScoutTable(3,1), fillScoutTable(2,1)]
 allGames(senegal, senagalGames)
 
-const netherlandsGames = [fillScoutTable(2,0),fillScoutTable(1,1)]
+const netherlandsGames = [fillScoutTable(2,0),fillScoutTable(1,1), fillScoutTable(2,0)]
 allGames(netherlands, netherlandsGames)
 
 //----------------------------Group B-------------------------
