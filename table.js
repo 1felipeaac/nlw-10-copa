@@ -153,16 +153,16 @@ const saudi_arabia = document.getElementById("saudi-arabia")
 const mexico = document.getElementById("mexico")
 const poland = document.getElementById("poland")
 
-const argentinaGames = [fillScoutTable(1, 2), fillScoutTable(2,0)]
+const argentinaGames = [fillScoutTable(1, 2), fillScoutTable(2,0), fillScoutTable(2,0)]
 allGames(argentina, argentinaGames)
 
-const saudi_arabiaGames = [fillScoutTable(2, 1), fillScoutTable(0,2)]
+const saudi_arabiaGames = [fillScoutTable(2, 1), fillScoutTable(0,2), fillScoutTable(1,2)]
 allGames(saudi_arabia, saudi_arabiaGames)
 
-const mexicoGames = [fillScoutTable(0, 0), fillScoutTable(0,1)]
+const mexicoGames = [fillScoutTable(0, 0), fillScoutTable(0,2), fillScoutTable(2,1)]
 allGames(mexico, mexicoGames)
 
-const polandGames = [fillScoutTable(0, 0), fillScoutTable(2,0)]
+const polandGames = [fillScoutTable(0, 0), fillScoutTable(2,0), fillScoutTable(0,2)]
 allGames(poland, polandGames)
 
 //---------------------------Group D------------------------------

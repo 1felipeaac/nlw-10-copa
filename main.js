@@ -280,9 +280,11 @@ walesScore[2].innerHTML = 0
 
 argentinaScore[0].innerHTML = 1
 argentinaScore[1].innerHTML = 2
+argentinaScore[2].innerHTML = 2
 
 saudi_arabiaScore[0].innerHTML = 2
 saudi_arabiaScore[1].innerHTML = 0
+saudi_arabiaScore[2].innerHTML = 1
 
 denmarkScore[0].innerHTML = 0
 denmarkScore[1].innerHTML = 1
@@ -294,9 +296,11 @@ tunisiaScore[2].innerHTML = 1
 
 mexicoScore[0].innerHTML = 0
 mexicoScore[1].innerHTML = 0
+mexicoScore[2].innerHTML = 2
 
 polandScore[0].innerHTML = 0
 polandScore[1].innerHTML = 2
+polandScore[2].innerHTML = 0
 
 franceScore[0].innerHTML = 4
 franceScore[1].innerHTML = 2
