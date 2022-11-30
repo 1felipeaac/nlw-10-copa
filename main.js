@@ -286,9 +286,11 @@ saudi_arabiaScore[1].innerHTML = 0
 
 denmarkScore[0].innerHTML = 0
 denmarkScore[1].innerHTML = 1
+denmarkScore[2].innerHTML = 0
 
 tunisiaScore[0].innerHTML = 0
 tunisiaScore[1].innerHTML = 0
+tunisiaScore[2].innerHTML = 1
 
 mexicoScore[0].innerHTML = 0
 mexicoScore[1].innerHTML = 0
@@ -298,9 +300,11 @@ polandScore[1].innerHTML = 2
 
 franceScore[0].innerHTML = 4
 franceScore[1].innerHTML = 2
+franceScore[2].innerHTML = 0
 
 australiaScore[0].innerHTML = 1
 australiaScore[1].innerHTML = 1
+australiaScore[2].innerHTML = 1
 
 moroccoScore[0].innerHTML = 0
 moroccoScore[1].innerHTML = 2
