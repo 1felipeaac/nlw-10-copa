@@ -136,16 +136,16 @@ const iran = document.getElementById("iran")
 const united_states = document.getElementById("united-states")
 const wales = document.getElementById("wales")
 
-const englandGames = [fillScoutTable(6,2), fillScoutTable(0,0)]
+const englandGames = [fillScoutTable(6,2), fillScoutTable(0,0), fillScoutTable(3,0)]
 allGames(england, englandGames)
 
-const iranGames = [fillScoutTable(2,6), fillScoutTable(2,0)]
+const iranGames = [fillScoutTable(2,6), fillScoutTable(2,0), fillScoutTable(0,1)]
 allGames(iran, iranGames)
 
-const united_statesGames = [fillScoutTable(1,1), fillScoutTable(0,0)]
+const united_statesGames = [fillScoutTable(1,1), fillScoutTable(0,0), fillScoutTable(1,0)]
 allGames(united_states, united_statesGames)
 
-const walesGames = [fillScoutTable(1, 1), fillScoutTable(0,2)]
+const walesGames = [fillScoutTable(1, 1), fillScoutTable(0,2), fillScoutTable(0,3)]
 allGames(wales, walesGames)
 //---------------------------Group C------------------------------
 const argentina = document.getElementById("argentina")

@@ -262,17 +262,21 @@ ecuadorScore[2].innerHTML = 1
 
 englanScore[0].innerHTML = 6
 englanScore[1].innerHTML = 0
+englanScore[2].innerHTML = 3
 
 
 iranScore[0].innerHTML = 2
 iranScore[1].innerHTML = 2
+iranScore[2].innerHTML = 0
 
 united_statesScore[0].innerHTML = 1
 united_statesScore[1].innerHTML = 0
+united_statesScore[2].innerHTML = 1
 
 
 walesScore[0].innerHTML = 1
 walesScore[1].innerHTML = 0
+walesScore[2].innerHTML = 0
 
 argentinaScore[0].innerHTML = 1
 argentinaScore[1].innerHTML = 2
