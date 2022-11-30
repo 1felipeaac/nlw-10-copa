@@ -177,7 +177,7 @@ allGames(france, franceGames)
 const australiaGames = [fillScoutTable(1, 4), fillScoutTable(1,0)]
 allGames(australia, australiaGames)
 
-const denmarkGames = [fillScoutTable(0, 0), fillScoutTable(0,1)]
+const denmarkGames = [fillScoutTable(0, 0), fillScoutTable(1,2)]
 allGames(denmark, denmarkGames)
 
 const tunisiaGames = [fillScoutTable(0, 0), fillScoutTable(0,1)]
