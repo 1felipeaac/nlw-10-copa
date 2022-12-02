@@ -392,8 +392,8 @@ for (let index = 0; index < flag_country.length; index++) {
 const button_theme = document.getElementById("button-theme")
 
 button_theme.addEventListener("click", function () {
-  document.getElementById("get_theme").style.display = "flex"
-  document.getElementById("get_theme").addEventListener("click", function () {
-    document.getElementById("get_theme").style.display = "none"
+  document.getElementById("list-theme").style.display = "flex"
+  document.getElementById("list-theme").addEventListener("click", function () {
+    document.getElementById("list-theme").style.display = "none"
   })
 })
