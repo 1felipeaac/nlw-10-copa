@@ -312,27 +312,35 @@ australiaScore[2].innerHTML = 1
 
 moroccoScore[0].innerHTML = 0
 moroccoScore[1].innerHTML = 2
+moroccoScore[2].innerHTML = 2
 
 croatiaScore[0].innerHTML = 0
 croatiaScore[1].innerHTML = 4
+croatiaScore[2].innerHTML = 0
 
 germanyScore[0].innerHTML = 1
 germanyScore[1].innerHTML = 1
+germanyScore[2].innerHTML = 4
 
 japanScore[0].innerHTML = 2
 japanScore[1].innerHTML = 0
+japanScore[2].innerHTML = 2
 
 spainScore[0].innerHTML = 7
 spainScore[1].innerHTML = 1
+spainScore[2].innerHTML = 1
 
 costa_ricaScore[0].innerHTML = 0
 costa_ricaScore[1].innerHTML = 1
+costa_ricaScore[2].innerHTML = 2
 
 belgiumScore[0].innerHTML = 1
 belgiumScore[1].innerHTML = 0
+belgiumScore[2].innerHTML = 0
 
 canadaScore[0].innerHTML = 0
 canadaScore[1].innerHTML = 1
+canadaScore[2].innerHTML = 1
 
 switzerlandScore[0].innerHTML = 1
 switzerlandScore[1].innerHTML = 0

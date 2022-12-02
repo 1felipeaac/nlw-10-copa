@@ -189,16 +189,20 @@ const costa_rica = document.getElementById("costa-rica")
 const germany = document.getElementById("germany")
 const japan = document.getElementById("japan")
 
-const spainGames = [fillScoutTable(7, 0), fillScoutTable(1,1)]
+const spainGames = [fillScoutTable(7, 0), fillScoutTable(1,1), fillScoutTable(1,2)]
 allGames(spain, spainGames)
 
-const costa_ricaGames = [fillScoutTable(0, 7), fillScoutTable(1, 0)]
+const costa_ricaGames = [
+  fillScoutTable(0, 7),
+  fillScoutTable(1, 0),
+  fillScoutTable(2, 4),
+]
 allGames(costa_rica, costa_ricaGames)
 
-const germanyGames = [fillScoutTable(1, 2), fillScoutTable(1,1)]
+const germanyGames = [fillScoutTable(1, 2), fillScoutTable(1,1), fillScoutTable(4,2)]
 allGames(germany, germanyGames)
 
-const japanGames = [fillScoutTable(2, 1), fillScoutTable(0, 1)]
+const japanGames = [fillScoutTable(2, 1), fillScoutTable(0, 1), fillScoutTable(2,1)]
 allGames(japan, japanGames)
 
 //---------------------------Group F------------------------------
@@ -207,16 +211,16 @@ const canada = document.getElementById("canada")
 const morocco = document.getElementById("morocco")
 const croatia = document.getElementById("croatia")
 
-const belgiumGames = [fillScoutTable(1,0), fillScoutTable(0,2)]
+const belgiumGames = [fillScoutTable(1,0), fillScoutTable(0,2), fillScoutTable(0,0)]
 allGames(belgium, belgiumGames)
 
-const canadaGames = [fillScoutTable(0, 1), fillScoutTable(1,3)]
+const canadaGames = [fillScoutTable(0, 1), fillScoutTable(1,3), fillScoutTable(1,2)]
 allGames(canada, canadaGames)
 
-const moroccoGames = [fillScoutTable(0, 0), fillScoutTable(2,0)]
+const moroccoGames = [fillScoutTable(0, 0), fillScoutTable(2,0), fillScoutTable(2,1)]
 allGames(morocco, moroccoGames)
 
-const croatiaGames = [fillScoutTable(0, 0), fillScoutTable(4,1)]
+const croatiaGames = [fillScoutTable(0, 0), fillScoutTable(4,1), fillScoutTable(0,0)]
 allGames(croatia, croatiaGames)
 
 //---------------------------Group G------------------------------

@@ -205,7 +205,7 @@ td {
 
 .theadScout > tr > th {
   /* padding: 20px 30px 20px 30px; */
-  border: none;
+  /* border: none; */
   height: 30px;
   width: 30px;
 }
