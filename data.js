@@ -439,24 +439,10 @@ export function crateHeader(local) {
   return `
     <div id="dropdown">
       <strong id="drop-theme"><button id="button-theme" type="submit">Tema <img id="arrow" src="./assets/icon-arrow.svg" alt="arrow"></button></strong>
-      <!-- <div id="get_theme">
-        <label class="container" id="yellow">
-          <input type="radio" name="theme" id="yellow" value="yellow" checked/>
-          <span class="checkmark" id="span_yellow"></span>
-        </label>
-        <label class="container" id="blue">
-          <input type="radio" name="theme" id="blue" value="blue"/>
-          <span class="checkmark" id="span_blue"></span>
-        </label>
-        <label class="container" id="green">
-          <input type="radio" name="theme" id="green" value="green"/>
-          <span class="checkmark" id="span_green"></span>
-        </label> 
-      </div> -->
       <ul id="list-theme">
         <li>
           <label class="container" id="yellow">
-            <input type="radio" name="theme" id="yellow" value="yellow" checked/>
+            <input type="radio" name="theme" id="yellow" value="yellow"/>
             <span class="checkmark" id="span_yellow"></span>
           </label>
         </label>
