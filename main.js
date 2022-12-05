@@ -344,27 +344,35 @@ canadaScore[2].innerHTML = 1
 
 switzerlandScore[0].innerHTML = 1
 switzerlandScore[1].innerHTML = 0
+switzerlandScore[2].innerHTML = 3
 
 cameroonScore[0].innerHTML = 0
 cameroonScore[1].innerHTML = 3
+cameroonScore[2].innerHTML = 1
 
 south_koreaScore[0].innerHTML = 0
 south_koreaScore[1].innerHTML = 2
+south_koreaScore[2].innerHTML = 2
 
 uruguayScore[0].innerHTML = 0
 uruguayScore[1].innerHTML = 0
+uruguayScore[2].innerHTML = 2
 
 ghanaScore[0].innerHTML = 2
 ghanaScore[1].innerHTML = 3
+ghanaScore[2].innerHTML = 0
 
 portugalScore[0].innerHTML = 3
 portugalScore[1].innerHTML = 2
+portugalScore[2].innerHTML = 1
 
 brazilScore[0].innerHTML = 2
 brazilScore[1].innerHTML = 1
+brazilScore[2].innerHTML = 0
 
 serbiaScore[0].innerHTML = 0
 serbiaScore[1].innerHTML = 3
+serbiaScore[2].innerHTML = 2
 //------------------------------EVENTS-----------------------------
 
 const flag_country = document.getElementsByClassName("country")
